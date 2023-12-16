@@ -75,4 +75,3 @@ final class NetworkService: NetworkServiceType {
         return NSError(domain: domain.rawValue, code: code, userInfo: userInfo)
     }
 }
-
