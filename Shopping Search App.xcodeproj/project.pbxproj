@@ -21,6 +21,7 @@
 		9BBF8CB72B2E1179000EB8C9 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBF8CB62B2E1179000EB8C9 /* ErrorResponse.swift */; };
 		9BBF8CB92B2E1199000EB8C9 /* NetworkServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBF8CB82B2E1199000EB8C9 /* NetworkServiceType.swift */; };
 		9BBF8CBB2B2E11B2000EB8C9 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBF8CBA2B2E11B2000EB8C9 /* URLSessionProtocol.swift */; };
+		9BBF8CBD2B2E126A000EB8C9 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBF8CBC2B2E126A000EB8C9 /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		9BBF8CB62B2E1179000EB8C9 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		9BBF8CB82B2E1199000EB8C9 /* NetworkServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceType.swift; sourceTree = "<group>"; };
 		9BBF8CBA2B2E11B2000EB8C9 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
+		9BBF8CBC2B2E126A000EB8C9 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 			children = (
 				9BBF8CB12B2E111B000EB8C9 /* Protocols */,
 				9BBF8CB02B2E110A000EB8C9 /* Enumerators */,
+				9BBF8CBC2B2E126A000EB8C9 /* NetworkService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				9BBF8C802B2E0B69000EB8C9 /* AppDelegate.swift in Sources */,
 				9BBF8C822B2E0B69000EB8C9 /* SceneDelegate.swift in Sources */,
 				9BBF8CB92B2E1199000EB8C9 /* NetworkServiceType.swift in Sources */,
+				9BBF8CBD2B2E126A000EB8C9 /* NetworkService.swift in Sources */,
 				9BBF8CBB2B2E11B2000EB8C9 /* URLSessionProtocol.swift in Sources */,
 				9BBF8CB72B2E1179000EB8C9 /* ErrorResponse.swift in Sources */,
 				9BBF8CB52B2E1160000EB8C9 /* HTTPMethod.swift in Sources */,
