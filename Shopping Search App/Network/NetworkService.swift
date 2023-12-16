@@ -21,7 +21,7 @@ final class NetworkService: NetworkServiceType {
     func request<Request: DataRequest>(_ request: Request,
                                        completion: @escaping (Result<Request.Response, Error>) -> Void) {
         guard var urlComponent = URLComponents(string: request.url) else {
-            let error = createError(withDomain: .invalidEndpoint, code: 404)
+            let error = createError(forError: .invalidEndpoint)
             completion(.failure(error))
             return
         }
@@ -29,7 +29,7 @@ final class NetworkService: NetworkServiceType {
         urlComponent.queryItems = request.queryItems.map { URLQueryItem(name: $0.key, value: $0.value) }
         
         guard let url = urlComponent.url else {
-            let error = createError(withDomain: .invalidEndpoint, code: 404)
+            let error = createError(forError: .invalidEndpoint)
             completion(.failure(error))
             return
         }
@@ -48,13 +48,13 @@ final class NetworkService: NetworkServiceType {
             
             guard let response = response as? HTTPURLResponse, (200..<300).contains(response.statusCode) else {
                 let errorMessage = "Unexpected status code: \((response as? HTTPURLResponse)?.statusCode ?? -1)"
-                let error = self.createError(withDomain: .invalidResponse, code: 417, userInfo: [NSLocalizedDescriptionKey: errorMessage])
+                let error = self.createError(forError: .invalidResponse, userInfo: [NSLocalizedDescriptionKey: errorMessage])
                 completion(.failure(error))
                 return
             }
             
             guard let data = data else {
-                let error = self.createError(withDomain: .unprocessableEntity, code: 422)
+                let error = self.createError(forError: .unprocessableEntity)
                 completion(.failure(error))
                 return
             }
@@ -69,9 +69,7 @@ final class NetworkService: NetworkServiceType {
     }
     
     // MARK: - Private Methods
-    private func createError(withDomain domain: ErrorResponse, 
-                             code: Int,
-                             userInfo: [String: Any]? = nil) -> Error {
-        return NSError(domain: domain.rawValue, code: code, userInfo: userInfo)
+    private func createError(forError error: ErrorResponse, userInfo: [String: Any]? = nil) -> Error {
+        return NSError(domain: error.domain, code: error.rawValue, userInfo: userInfo)
     }
 }

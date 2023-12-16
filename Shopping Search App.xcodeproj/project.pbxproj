@@ -13,7 +13,6 @@
 		9BBF8C872B2E0B69000EB8C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BBF8C852B2E0B69000EB8C9 /* Main.storyboard */; };
 		9BBF8C892B2E0B6E000EB8C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BBF8C882B2E0B6E000EB8C9 /* Assets.xcassets */; };
 		9BBF8C8C2B2E0B6E000EB8C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BBF8C8A2B2E0B6E000EB8C9 /* LaunchScreen.storyboard */; };
-		9BBF8C972B2E0B6E000EB8C9 /* Shopping_Search_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBF8C962B2E0B6E000EB8C9 /* Shopping_Search_AppTests.swift */; };
 		9BBF8CA12B2E0B6E000EB8C9 /* Shopping_Search_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBF8CA02B2E0B6E000EB8C9 /* Shopping_Search_AppUITests.swift */; };
 		9BBF8CA32B2E0B6E000EB8C9 /* Shopping_Search_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBF8CA22B2E0B6E000EB8C9 /* Shopping_Search_AppUITestsLaunchTests.swift */; };
 		9BBF8CB32B2E114B000EB8C9 /* DataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBF8CB22B2E114B000EB8C9 /* DataRequest.swift */; };
@@ -22,6 +21,7 @@
 		9BBF8CB92B2E1199000EB8C9 /* NetworkServiceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBF8CB82B2E1199000EB8C9 /* NetworkServiceType.swift */; };
 		9BBF8CBB2B2E11B2000EB8C9 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBF8CBA2B2E11B2000EB8C9 /* URLSessionProtocol.swift */; };
 		9BBF8CBD2B2E126A000EB8C9 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBF8CBC2B2E126A000EB8C9 /* NetworkService.swift */; };
+		9BBF8CC12B2E1E6E000EB8C9 /* ErrorResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBF8CC02B2E1E6E000EB8C9 /* ErrorResponseTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +51,6 @@
 		9BBF8C8B2B2E0B6E000EB8C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9BBF8C8D2B2E0B6E000EB8C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BBF8C922B2E0B6E000EB8C9 /* Shopping Search AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Shopping Search AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9BBF8C962B2E0B6E000EB8C9 /* Shopping_Search_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shopping_Search_AppTests.swift; sourceTree = "<group>"; };
 		9BBF8C9C2B2E0B6E000EB8C9 /* Shopping Search AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Shopping Search AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BBF8CA02B2E0B6E000EB8C9 /* Shopping_Search_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shopping_Search_AppUITests.swift; sourceTree = "<group>"; };
 		9BBF8CA22B2E0B6E000EB8C9 /* Shopping_Search_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shopping_Search_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -61,6 +60,7 @@
 		9BBF8CB82B2E1199000EB8C9 /* NetworkServiceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceType.swift; sourceTree = "<group>"; };
 		9BBF8CBA2B2E11B2000EB8C9 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
 		9BBF8CBC2B2E126A000EB8C9 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		9BBF8CC02B2E1E6E000EB8C9 /* ErrorResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponseTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +126,7 @@
 		9BBF8C952B2E0B6E000EB8C9 /* Shopping Search AppTests */ = {
 			isa = PBXGroup;
 			children = (
-				9BBF8C962B2E0B6E000EB8C9 /* Shopping_Search_AppTests.swift */,
+				9BBF8CBE2B2E1E49000EB8C9 /* Network */,
 			);
 			path = "Shopping Search AppTests";
 			sourceTree = "<group>";
@@ -167,6 +167,22 @@
 				9BBF8CBA2B2E11B2000EB8C9 /* URLSessionProtocol.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		9BBF8CBE2B2E1E49000EB8C9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9BBF8CBF2B2E1E54000EB8C9 /* Enumerators */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		9BBF8CBF2B2E1E54000EB8C9 /* Enumerators */ = {
+			isa = PBXGroup;
+			children = (
+				9BBF8CC02B2E1E6E000EB8C9 /* ErrorResponseTests.swift */,
+			);
+			path = Enumerators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +256,7 @@
 					};
 					9BBF8C912B2E0B6E000EB8C9 = {
 						CreatedOnToolsVersion = 15.1;
+						LastSwiftMigration = 1510;
 						TestTargetID = 9BBF8C7B2B2E0B69000EB8C9;
 					};
 					9BBF8C9B2B2E0B6E000EB8C9 = {
@@ -316,7 +333,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BBF8C972B2E0B6E000EB8C9 /* Shopping_Search_AppTests.swift in Sources */,
+				9BBF8CC12B2E1E6E000EB8C9 /* ErrorResponseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,6 +567,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 25M2YHUYP7;
@@ -562,6 +580,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Shopping Search App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Shopping Search App";
@@ -573,6 +592,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 25M2YHUYP7;

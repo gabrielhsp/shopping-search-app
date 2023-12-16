@@ -7,8 +7,19 @@
 
 import Foundation
 
-enum ErrorResponse: String, Error {
-    case invalidEndpoint = "Invalid Endpoint"
-    case invalidResponse = "Invalid Response"
-    case unprocessableEntity = "Unprocessable Entity"
+enum ErrorResponse: Int, Error {
+    case invalidEndpoint = 404
+    case invalidResponse = 417
+    case unprocessableEntity = 422
+    
+    var domain: String {
+        switch self {
+        case .invalidEndpoint:
+            return "Invalid Endpoint"
+        case .invalidResponse:
+            return "Invalid Response"
+        case .unprocessableEntity:
+            return "Unprocessable Entity"
+        }
+    }
 }
