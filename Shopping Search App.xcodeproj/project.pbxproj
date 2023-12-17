@@ -43,6 +43,7 @@
 		9B6080A52B2E86330074909E /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
 		9B6080A82B2E867A0074909E /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
 		9B6080AB2B2E880E0074909E /* URLSessionDataTaskMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskMock.swift; sourceTree = "<group>"; };
+		9B6080AD2B2E8EDE0074909E /* Shopping Search App.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = "Shopping Search App.xctestplan"; path = "Shopping Search AppTests/Shopping Search App.xctestplan"; sourceTree = "<group>"; };
 		9BBF8C7C2B2E0B69000EB8C9 /* Shopping Search App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shopping Search App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BBF8C7F2B2E0B69000EB8C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BBF8C812B2E0B69000EB8C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +102,7 @@
 		9BBF8C732B2E0B69000EB8C9 = {
 			isa = PBXGroup;
 			children = (
+				9B6080AD2B2E8EDE0074909E /* Shopping Search App.xctestplan */,
 				9BBF8C7E2B2E0B69000EB8C9 /* Shopping Search App */,
 				9BBF8C952B2E0B6E000EB8C9 /* Shopping Search AppTests */,
 				9BBF8C7D2B2E0B69000EB8C9 /* Products */,

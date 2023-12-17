@@ -1,0 +1,28 @@
+{
+  "configurations" : [
+    {
+      "id" : "373784C8-31D0-4FBF-B8FD-2B7C965618A1",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Shopping Search App.xcodeproj",
+      "identifier" : "9BBF8C7B2B2E0B69000EB8C9",
+      "name" : "Shopping Search App"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Shopping Search App.xcodeproj",
+        "identifier" : "9BBF8C912B2E0B6E000EB8C9",
+        "name" : "Shopping Search AppTests"
+      }
+    }
+  ],
+  "version" : 1
+}
