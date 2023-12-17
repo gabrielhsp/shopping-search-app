@@ -20,6 +20,4 @@ final class ErrorResponseTests: XCTest {
         sut = nil
         super.tearDown()
     }
-    
-    func test_whenSutIs
 }
