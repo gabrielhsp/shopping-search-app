@@ -7,8 +7,6 @@
 
 import Foundation
 
-import Foundation
-
 final class NetworkService: NetworkServiceType {
     // MARK: - Properties
     private let urlSession: URLSessionProtocol
