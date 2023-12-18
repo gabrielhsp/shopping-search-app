@@ -13,6 +13,7 @@ import Quick
 final class NetworkServiceTests: QuickSpec {
     override class func spec() {
         var urlSessionMock: URLSessionMock!
+        var requestMock: DataRequestMock!
         var sut: NetworkService!
         
         beforeEach {
@@ -21,8 +22,30 @@ final class NetworkServiceTests: QuickSpec {
         }
         
         describe("#request") {
+            var requestResultSuccessCallArgs: [DataRequestMock.Response] = []
+            var requestResultFailureCallArgs: [Error] = []
+            
             context("when url request contains components that can't be safely unwrapped") {
-                // TODO: - Add tests here
+                beforeEach {
+                    requestMock = DataRequestMock(url: "123456https://")
+                    
+                    sut.request(requestMock) { result in
+                        switch result {
+                        case .success(let success):
+                            requestResultSuccessCallArgs.append(success)
+                        case .failure(let failure):
+                            requestResultFailureCallArgs.append(failure)
+                        }
+                    }
+                }
+                
+                it("should call request method once with a failure result returning an invalid endpoint error") {
+                    let assertErrorObject = requestResultFailureCallArgs.last as? NSError
+                    let expectedError = createExpectedError(error: .invalidEndpoint)
+                    
+                    expect(requestResultFailureCallArgs.count).to(equal(1))
+                    expect(assertErrorObject).to(equal(expectedError))
+                }
             }
             
             context("when url request contains components that can be safely unwrapped") {
@@ -58,6 +81,10 @@ final class NetworkServiceTests: QuickSpec {
                     // TODO: - Add tests here
                 }
             }
+        }
+        
+        func createExpectedError(error: ErrorResponse, userInfo: [String: Any]? = nil) -> NSError {
+            return NSError(domain: error.domain, code: error.rawValue, userInfo: userInfo)
         }
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B3A727A2B3080F7008A7581 /* DataRequestMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3A72792B3080F7008A7581 /* DataRequestMock.swift */; };
 		9B60809F2B2E76770074909E /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 9B60809E2B2E76770074909E /* Quick */; };
 		9B6080A22B2E76A50074909E /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 9B6080A12B2E76A50074909E /* Nimble */; };
 		9B6080A42B2E7AF00074909E /* HTTPMethodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6080A32B2E7AF00074909E /* HTTPMethodTests.swift */; };
@@ -39,11 +40,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B3A72792B3080F7008A7581 /* DataRequestMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequestMock.swift; sourceTree = "<group>"; };
 		9B6080A32B2E7AF00074909E /* HTTPMethodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethodTests.swift; sourceTree = "<group>"; };
 		9B6080A52B2E86330074909E /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
 		9B6080A82B2E867A0074909E /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
 		9B6080AB2B2E880E0074909E /* URLSessionDataTaskMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskMock.swift; sourceTree = "<group>"; };
-		9B6080AD2B2E8EDE0074909E /* Shopping Search App.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = "Shopping Search App.xctestplan"; path = "Shopping Search AppTests/Shopping Search App.xctestplan"; sourceTree = "<group>"; };
+		9B6080AD2B2E8EDE0074909E /* Shopping Search App.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Shopping Search App.xctestplan"; sourceTree = "<group>"; };
 		9BBF8C7C2B2E0B69000EB8C9 /* Shopping Search App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shopping Search App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BBF8C7F2B2E0B69000EB8C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BBF8C812B2E0B69000EB8C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			children = (
 				9B6080A82B2E867A0074909E /* URLSessionMock.swift */,
 				9B6080AB2B2E880E0074909E /* URLSessionDataTaskMock.swift */,
+				9B3A72792B3080F7008A7581 /* DataRequestMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -102,7 +105,6 @@
 		9BBF8C732B2E0B69000EB8C9 = {
 			isa = PBXGroup;
 			children = (
-				9B6080AD2B2E8EDE0074909E /* Shopping Search App.xctestplan */,
 				9BBF8C7E2B2E0B69000EB8C9 /* Shopping Search App */,
 				9BBF8C952B2E0B6E000EB8C9 /* Shopping Search AppTests */,
 				9BBF8C7D2B2E0B69000EB8C9 /* Products */,
@@ -136,6 +138,7 @@
 		9BBF8C952B2E0B6E000EB8C9 /* Shopping Search AppTests */ = {
 			isa = PBXGroup;
 			children = (
+				9B6080AD2B2E8EDE0074909E /* Shopping Search App.xctestplan */,
 				9BBF8CBE2B2E1E49000EB8C9 /* Network */,
 			);
 			path = "Shopping Search AppTests";
@@ -316,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B6080A92B2E867A0074909E /* URLSessionMock.swift in Sources */,
+				9B3A727A2B3080F7008A7581 /* DataRequestMock.swift in Sources */,
 				9B6080A42B2E7AF00074909E /* HTTPMethodTests.swift in Sources */,
 				9B6080A62B2E86330074909E /* NetworkServiceTests.swift in Sources */,
 				9BBF8CC12B2E1E6E000EB8C9 /* ErrorResponseTests.swift in Sources */,

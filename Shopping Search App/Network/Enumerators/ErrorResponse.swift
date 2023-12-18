@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ErrorResponse: Int, Error {
+enum ErrorResponse: Int, Error, Equatable {
     case invalidEndpoint = 404
     case invalidResponse = 417
     case unprocessableEntity = 422
