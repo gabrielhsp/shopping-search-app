@@ -158,14 +158,100 @@ final class NetworkServiceTests: QuickSpec {
                         expect(requestResultFailureCallArgs.count).to(equal(1))
                         expect(assertErrorObject).to(equal(expectedError))
                     }
+                    
+                    it("should call url session data task method once") {
+                        let assertObject = urlSessionMock.dataTaskCallArgs.last
+                        
+                        expect(urlSessionMock.dataTaskCallArgs.count).to(equal(1))
+                        expect(assertObject?.url?.absoluteString).to(equal("https://api.mercadolibre.com/sites/MLB/search?q=iPhone"))
+                        expect(assertObject?.httpMethod).to(equal("GET"))
+                        expect(assertObject?.allHTTPHeaderFields).to(equal(["api_version": "1"]))
+                    }
                 }
                 
                 context("and the response response is decoded") {
-                    // TODO: - Add tests here
+                    var dummyURL: URL!
+                    var dummyResponse: HTTPURLResponse!
+                    var dummyData: Data!
+                    
+                    beforeEach {
+                        dummyURL = URL(string: requestMock.url)
+                        dummyResponse = HTTPURLResponse(url: dummyURL, statusCode: 200, httpVersion: nil, headerFields: nil)
+                        dummyData = try JSONSerialization.data(withJSONObject: ["response": "value", "count": 1])
+                        
+                        urlSessionMock.data = dummyData
+                        urlSessionMock.response = dummyResponse
+                        
+                        sut.request(requestMock) { result in
+                            switch result {
+                            case .success(let success):
+                                requestResultSuccessCallArgs.append(success)
+                            case .failure(let failure):
+                                requestResultFailureCallArgs.append(failure)
+                            }
+                        }
+                    }
+                    
+                    it("should call request method once with a success result returning an error") {
+                        let expectedResponse = ResponseDummy(response: "value", count: 1)
+                        
+                        expect(requestResultSuccessCallArgs.count).to(equal(1))
+                        expect(requestResultSuccessCallArgs.last).to(equal(expectedResponse))
+                    }
+                    
+                    it("should call url session data task method once") {
+                        let assertObject = urlSessionMock.dataTaskCallArgs.last
+                        
+                        expect(urlSessionMock.dataTaskCallArgs.count).to(equal(1))
+                        expect(assertObject?.url?.absoluteString).to(equal("https://api.mercadolibre.com/sites/MLB/search?q=iPhone"))
+                        expect(assertObject?.httpMethod).to(equal("GET"))
+                        expect(assertObject?.allHTTPHeaderFields).to(equal(["api_version": "1"]))
+                    }
                 }
                 
                 context("and the response is decoded with an error") {
-                    // TODO: - Add tests here
+                    var dummyURL: URL!
+                    var dummyResponse: HTTPURLResponse!
+                    var dummyData: Data!
+                    
+                    beforeEach {
+                        dummyURL = URL(string: requestMock.url)
+                        dummyResponse = HTTPURLResponse(url: dummyURL, statusCode: 200, httpVersion: nil, headerFields: nil)
+                        dummyData = try JSONSerialization.data(withJSONObject: ["value": "response", "count": 1])
+                        
+                        urlSessionMock.data = dummyData
+                        urlSessionMock.response = dummyResponse
+                        
+                        sut.request(requestMock) { result in
+                            switch result {
+                            case .success(let success):
+                                requestResultSuccessCallArgs.append(success)
+                            case .failure(let failure):
+                                requestResultFailureCallArgs.append(failure)
+                            }
+                        }
+                    }
+                    
+                    it("should call request method once with a failure result returning an error") {
+                        let assertErrorObject = requestResultFailureCallArgs.last as? NSError
+                        let expectedUserInfo: [String: Any] = [
+                            "NSCodingPath": [],
+                            "NSDebugDescription": "No value associated with key CodingKeys(stringValue: \"response\", intValue: nil) (\"response\")."
+                        ]
+                        let expectedError = NSError(domain: "NSCocoaErrorDomain", code: 4865, userInfo: expectedUserInfo)
+                        
+                        expect(requestResultFailureCallArgs.count).to(equal(1))
+                        expect(assertErrorObject).to(equal(expectedError))
+                    }
+                    
+                    it("should call url session data task method once") {
+                        let assertObject = urlSessionMock.dataTaskCallArgs.last
+                        
+                        expect(urlSessionMock.dataTaskCallArgs.count).to(equal(1))
+                        expect(assertObject?.url?.absoluteString).to(equal("https://api.mercadolibre.com/sites/MLB/search?q=iPhone"))
+                        expect(assertObject?.httpMethod).to(equal("GET"))
+                        expect(assertObject?.allHTTPHeaderFields).to(equal(["api_version": "1"]))
+                    }
                 }
             }
         }

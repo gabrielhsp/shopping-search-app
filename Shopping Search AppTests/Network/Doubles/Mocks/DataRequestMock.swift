@@ -9,7 +9,7 @@ import Foundation
 @testable import Shopping_Search_App
 
 struct DataRequestMock: DataRequest {
-    typealias Response = String
+    typealias Response = ResponseDummy
     
     var url: String = "https://api.mercadolibre.com/sites/MLB/search"
     
@@ -20,6 +20,6 @@ struct DataRequestMock: DataRequest {
     var queryItems: [String: String] = [:]
     
     func decode(_ data: Data) throws -> Response {
-        return String(data: data, encoding: .utf8) ?? ""
+        return try JSONDecoder().decode(ResponseDummy.self, from: data)
     }
 }
