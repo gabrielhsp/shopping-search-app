@@ -18,6 +18,10 @@
 		9B6080A62B2E86330074909E /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6080A52B2E86330074909E /* NetworkServiceTests.swift */; };
 		9B6080A92B2E867A0074909E /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6080A82B2E867A0074909E /* URLSessionMock.swift */; };
 		9B6080AC2B2E880E0074909E /* URLSessionDataTaskMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6080AB2B2E880E0074909E /* URLSessionDataTaskMock.swift */; };
+		9BB96D422B31F3D600D193CD /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB96D412B31F3D600D193CD /* UIView+Extension.swift */; };
+		9BB96D452B31F58B00D193CD /* ShoppingSearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB96D442B31F58B00D193CD /* ShoppingSearchTextField.swift */; };
+		9BB96D472B31F93F00D193CD /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BB96D462B31F93F00D193CD /* Colors.xcassets */; };
+		9BB96D4A2B31FA1400D193CD /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB96D492B31FA1400D193CD /* Colors.swift */; };
 		9BBF8C802B2E0B69000EB8C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBF8C7F2B2E0B69000EB8C9 /* AppDelegate.swift */; };
 		9BBF8C822B2E0B69000EB8C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBF8C812B2E0B69000EB8C9 /* SceneDelegate.swift */; };
 		9BBF8C892B2E0B6E000EB8C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BBF8C882B2E0B6E000EB8C9 /* Assets.xcassets */; };
@@ -52,6 +56,10 @@
 		9B6080A82B2E867A0074909E /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
 		9B6080AB2B2E880E0074909E /* URLSessionDataTaskMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskMock.swift; sourceTree = "<group>"; };
 		9B6080AD2B2E8EDE0074909E /* Shopping Search App.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Shopping Search App.xctestplan"; sourceTree = "<group>"; };
+		9BB96D412B31F3D600D193CD /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		9BB96D442B31F58B00D193CD /* ShoppingSearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchTextField.swift; sourceTree = "<group>"; };
+		9BB96D462B31F93F00D193CD /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		9BB96D492B31FA1400D193CD /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		9BBF8C7C2B2E0B69000EB8C9 /* Shopping Search App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shopping Search App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BBF8C7F2B2E0B69000EB8C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BBF8C812B2E0B69000EB8C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,8 +115,9 @@
 		9B3A727F2B312B24008A7581 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				9B3A72822B312B86008A7581 /* Protocols */,
 				9B3A72802B312B3E008A7581 /* ShoppingSearchViewController.swift */,
+				9B3A72822B312B86008A7581 /* Protocols */,
+				9BB96D432B31F57400D193CD /* Views */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -117,7 +126,6 @@
 			isa = PBXGroup;
 			children = (
 				9B3A72832B312B95008A7581 /* ShoppingSearchViewType.swift */,
-				9B3A72852B312BD4008A7581 /* ShoppingSearchView.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -141,6 +149,41 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		9BB96D3F2B31F3BD00D193CD /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9BB96D402B31F3C400D193CD /* Extensions */,
+				9BB96D492B31FA1400D193CD /* Colors.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		9BB96D402B31F3C400D193CD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9BB96D412B31F3D600D193CD /* UIView+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9BB96D432B31F57400D193CD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9B3A72852B312BD4008A7581 /* ShoppingSearchView.swift */,
+				9BB96D442B31F58B00D193CD /* ShoppingSearchTextField.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9BB96D482B31F9AF00D193CD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9BBF8C882B2E0B6E000EB8C9 /* Assets.xcassets */,
+				9BB96D462B31F93F00D193CD /* Colors.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		9BBF8C732B2E0B69000EB8C9 = {
 			isa = PBXGroup;
 			children = (
@@ -162,13 +205,14 @@
 		9BBF8C7E2B2E0B69000EB8C9 /* Shopping Search App */ = {
 			isa = PBXGroup;
 			children = (
-				9B3A727E2B312B1E008A7581 /* Scenes */,
-				9BBF8CAF2B2E10FC000EB8C9 /* Network */,
+				9BBF8C8D2B2E0B6E000EB8C9 /* Info.plist */,
 				9BBF8C7F2B2E0B69000EB8C9 /* AppDelegate.swift */,
 				9BBF8C812B2E0B69000EB8C9 /* SceneDelegate.swift */,
-				9BBF8C882B2E0B6E000EB8C9 /* Assets.xcassets */,
+				9BB96D3F2B31F3BD00D193CD /* Helpers */,
 				9BBF8C8A2B2E0B6E000EB8C9 /* LaunchScreen.storyboard */,
-				9BBF8C8D2B2E0B6E000EB8C9 /* Info.plist */,
+				9BBF8CAF2B2E10FC000EB8C9 /* Network */,
+				9BB96D482B31F9AF00D193CD /* Resources */,
+				9B3A727E2B312B1E008A7581 /* Scenes */,
 			);
 			path = "Shopping Search App";
 			sourceTree = "<group>";
@@ -320,6 +364,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BB96D472B31F93F00D193CD /* Colors.xcassets in Resources */,
 				9BBF8C8C2B2E0B6E000EB8C9 /* LaunchScreen.storyboard in Resources */,
 				9BBF8C892B2E0B6E000EB8C9 /* Assets.xcassets in Resources */,
 			);
@@ -340,11 +385,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B3A72842B312B95008A7581 /* ShoppingSearchViewType.swift in Sources */,
+				9BB96D452B31F58B00D193CD /* ShoppingSearchTextField.swift in Sources */,
 				9B3A72812B312B3E008A7581 /* ShoppingSearchViewController.swift in Sources */,
+				9BB96D4A2B31FA1400D193CD /* Colors.swift in Sources */,
 				9BBF8C802B2E0B69000EB8C9 /* AppDelegate.swift in Sources */,
 				9B3A72862B312BD4008A7581 /* ShoppingSearchView.swift in Sources */,
 				9BBF8C822B2E0B69000EB8C9 /* SceneDelegate.swift in Sources */,
 				9BBF8CB92B2E1199000EB8C9 /* NetworkServiceType.swift in Sources */,
+				9BB96D422B31F3D600D193CD /* UIView+Extension.swift in Sources */,
 				9BBF8CBD2B2E126A000EB8C9 /* NetworkService.swift in Sources */,
 				9BBF8CBB2B2E11B2000EB8C9 /* URLSessionProtocol.swift in Sources */,
 				9BBF8CB72B2E1179000EB8C9 /* ErrorResponse.swift in Sources */,
