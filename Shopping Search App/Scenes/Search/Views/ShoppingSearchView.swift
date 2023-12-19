@@ -8,6 +8,9 @@
 import UIKit
 
 final class ShoppingSearchView: UIView {
+    // MARK: - Properties
+    private var bottomConstraint: NSLayoutConstraint?
+    
     // MARK: - UI Components
     private let searchTextField: ShoppingSearchTextField = {
         let textField = ShoppingSearchTextField()
@@ -39,11 +42,16 @@ final class ShoppingSearchView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     // MARK: - Private Methods
     private func setup() {
         buildViewHierarchy()
         setupConstraints()
         setupAdditionalConfiguration()
+        registerKeyboardEvents()
     }
     
     private func buildViewHierarchy() {
@@ -60,14 +68,42 @@ final class ShoppingSearchView: UIView {
             
             searchButton.trailingAnchor.constraint(equalTo: searchTextField.trailingAnchor),
             searchButton.leadingAnchor.constraint(equalTo: searchTextField.leadingAnchor),
-            searchButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -16),
             searchButton.heightAnchor.constraint(equalToConstant: 50)
         ])
+        
+        bottomConstraint = searchButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
+        bottomConstraint?.isActive = true
     }
     
     private func setupAdditionalConfiguration() {
         backgroundColor = .appColor(.background)
         searchTextField.delegate = self
+    }
+    
+    private func registerKeyboardEvents() {
+        _ = NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification,
+                                                   object: nil,
+                                                   queue: nil,
+                                                   using: { [weak self] notification in
+            let key = UIResponder.keyboardFrameEndUserInfoKey
+            
+            guard let keyboardSize = (notification.userInfo?[key] as? NSValue)?.cgRectValue else {
+                return
+            }
+            
+            self?.updateBottomConstraint(constant: -keyboardSize.height)
+        })
+        
+        _ = NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillHideNotification, 
+                                                   object: nil,
+                                                   queue: nil,
+                                                   using: { [weak self] _ in
+            self?.updateBottomConstraint(constant: .zero)
+        })
+    }
+    
+    private func updateBottomConstraint(constant: CGFloat) {
+        bottomConstraint?.constant = constant
     }
 }
 
