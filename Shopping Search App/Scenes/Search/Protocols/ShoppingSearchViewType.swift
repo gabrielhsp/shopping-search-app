@@ -8,4 +8,5 @@
 import UIKit
 
 protocol ShoppingSearchViewType where Self: UIView {
+    var didTapSearchButton: ((String?) -> Void)? { get set }
 }

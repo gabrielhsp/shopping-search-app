@@ -7,10 +7,13 @@
 
 import UIKit
 
-final class ShoppingSearchView: UIView {
-    // MARK: - Properties
+final class ShoppingSearchView: UIView, ShoppingSearchViewType {
+    // MARK: - Private Properties
     private let notificationCenter: NotificationCenterProtocol
     private var bottomConstraint: NSLayoutConstraint?
+    
+    // MARK: - Properties
+    var didTapSearchButton: ((String?) -> Void)?
     
     // MARK: - UI Components
     private let searchTextField: ShoppingSearchTextField = {
@@ -80,6 +83,17 @@ final class ShoppingSearchView: UIView {
     private func setupAdditionalConfiguration() {
         backgroundColor = .appColor(.background)
         searchTextField.delegate = self
+        searchButton.addTarget(self, action: #selector(addActionOnSearchButton), for: .touchUpInside)
+    }
+    
+    private func sendSearchButtonEvent() {
+        searchTextField.resignFirstResponder()
+        didTapSearchButton?(searchTextField.text)
+    }
+    
+    @objc
+    private func addActionOnSearchButton() {
+        sendSearchButtonEvent()
     }
     
     private func registerKeyboardEvents() {
@@ -109,11 +123,11 @@ final class ShoppingSearchView: UIView {
     }
 }
 
-// MARK: - ShoppingSearchViewType
-extension ShoppingSearchView: ShoppingSearchViewType {
-    
-}
-
 // MARK: - UISearchBarDelegate
 extension ShoppingSearchView: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        sendSearchButtonEvent()
+        
+        return true
+    }
 }

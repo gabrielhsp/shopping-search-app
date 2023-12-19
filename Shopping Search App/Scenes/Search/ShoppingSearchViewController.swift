@@ -16,6 +16,7 @@ final class ShoppingSearchViewController: UIViewController {
     init(contentView: ShoppingSearchViewType = ShoppingSearchView()) {
         self.contentView = contentView
         super.init(nibName: nil, bundle: nil)
+        bindLayoutEvents()
     }
     
     required init?(coder: NSCoder) {
@@ -25,5 +26,12 @@ final class ShoppingSearchViewController: UIViewController {
     // MARK: - Override Methods
     override func loadView() {
         view = contentView
+    }
+    
+    // MARK: - Private Methods
+    private func bindLayoutEvents() {
+        contentView.didTapSearchButton = { searchText in
+            print("searchText", searchText)
+        }
     }
 }
