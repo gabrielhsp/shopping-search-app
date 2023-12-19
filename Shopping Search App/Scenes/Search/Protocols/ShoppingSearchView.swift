@@ -14,7 +14,7 @@ final class ShoppingSearchView: UIView {
         
         searchBar.translatesAutoresizingMaskIntoConstraints = false
         searchBar.placeholder = "O que você busca hoje?"
-        searchBar.showsCancelButton = true
+        searchBar.searchBarStyle = .minimal
         
         return searchBar
     }()
@@ -33,6 +33,7 @@ final class ShoppingSearchView: UIView {
     // MARK: - Override Methods
     override init(frame: CGRect) {
         super.init(frame: frame)
+        setup()
     }
     
     required init?(coder: NSCoder) {
@@ -48,30 +49,28 @@ final class ShoppingSearchView: UIView {
     
     private func buildViewHierarchy() {
         addSubview(searchBar)
-        addSubview(searchButton)
+//        addSubview(searchButton)
     }
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            searchBar.safeAreaLayoutGuide.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 16),
-            searchBar.safeAreaLayoutGuide.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 16),
-            searchBar.safeAreaLayoutGuide.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 16),
-            searchBar.heightAnchor.constraint(equalToConstant: 100),
-            
-            searchButton.topAnchor.constraint(equalTo: searchBar.bottomAnchor, constant: 16),
-            searchButton.leadingAnchor.constraint(equalTo: searchBar.leadingAnchor),
-            searchButton.trailingAnchor.constraint(equalTo: searchBar.trailingAnchor),
-            searchButton.safeAreaLayoutGuide.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -16),
-            searchButton.heightAnchor.constraint(equalToConstant: 50)
+            searchBar.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            searchBar.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            searchBar.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -16)
         ])
     }
     
     private func setupAdditionalConfiguration() {
-        
+        backgroundColor = .systemBackground
+        searchBar.delegate = self
     }
 }
 
 // MARK: - ShoppingSearchViewType
 extension ShoppingSearchView: ShoppingSearchViewType {
     
+}
+
+// MARK: - UISearchBarDelegate
+extension ShoppingSearchView: UISearchBarDelegate {
 }
