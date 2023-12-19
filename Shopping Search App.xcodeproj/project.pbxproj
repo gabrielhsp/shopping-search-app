@@ -22,6 +22,7 @@
 		9BB96D452B31F58B00D193CD /* ShoppingSearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB96D442B31F58B00D193CD /* ShoppingSearchTextField.swift */; };
 		9BB96D472B31F93F00D193CD /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BB96D462B31F93F00D193CD /* Colors.xcassets */; };
 		9BB96D4A2B31FA1400D193CD /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB96D492B31FA1400D193CD /* Colors.swift */; };
+		9BB96D4D2B3247BA00D193CD /* NotificationCenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB96D4C2B3247BA00D193CD /* NotificationCenterProtocol.swift */; };
 		9BBF8C802B2E0B69000EB8C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBF8C7F2B2E0B69000EB8C9 /* AppDelegate.swift */; };
 		9BBF8C822B2E0B69000EB8C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBF8C812B2E0B69000EB8C9 /* SceneDelegate.swift */; };
 		9BBF8C892B2E0B6E000EB8C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BBF8C882B2E0B6E000EB8C9 /* Assets.xcassets */; };
@@ -60,6 +61,7 @@
 		9BB96D442B31F58B00D193CD /* ShoppingSearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchTextField.swift; sourceTree = "<group>"; };
 		9BB96D462B31F93F00D193CD /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		9BB96D492B31FA1400D193CD /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		9BB96D4C2B3247BA00D193CD /* NotificationCenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterProtocol.swift; sourceTree = "<group>"; };
 		9BBF8C7C2B2E0B69000EB8C9 /* Shopping Search App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Shopping Search App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BBF8C7F2B2E0B69000EB8C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BBF8C812B2E0B69000EB8C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 		9BB96D3F2B31F3BD00D193CD /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				9BB96D4B2B3247AB00D193CD /* Protocols */,
 				9BB96D402B31F3C400D193CD /* Extensions */,
 				9BB96D492B31FA1400D193CD /* Colors.swift */,
 			);
@@ -182,6 +185,14 @@
 				9BB96D462B31F93F00D193CD /* Colors.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		9BB96D4B2B3247AB00D193CD /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9BB96D4C2B3247BA00D193CD /* NotificationCenterProtocol.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		9BBF8C732B2E0B69000EB8C9 = {
@@ -387,6 +398,7 @@
 				9B3A72842B312B95008A7581 /* ShoppingSearchViewType.swift in Sources */,
 				9BB96D452B31F58B00D193CD /* ShoppingSearchTextField.swift in Sources */,
 				9B3A72812B312B3E008A7581 /* ShoppingSearchViewController.swift in Sources */,
+				9BB96D4D2B3247BA00D193CD /* NotificationCenterProtocol.swift in Sources */,
 				9BB96D4A2B31FA1400D193CD /* Colors.swift in Sources */,
 				9BBF8C802B2E0B69000EB8C9 /* AppDelegate.swift in Sources */,
 				9B3A72862B312BD4008A7581 /* ShoppingSearchView.swift in Sources */,
