@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		9B3A727A2B3080F7008A7581 /* DataRequestMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3A72792B3080F7008A7581 /* DataRequestMock.swift */; };
 		9B3A727D2B31209A008A7581 /* ResponseDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3A727C2B31209A008A7581 /* ResponseDummy.swift */; };
+		9B3A72812B312B3E008A7581 /* ShoppingSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3A72802B312B3E008A7581 /* ShoppingSearchViewController.swift */; };
+		9B3A72842B312B95008A7581 /* ShoppingSearchViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3A72832B312B95008A7581 /* ShoppingSearchViewType.swift */; };
+		9B3A72862B312BD4008A7581 /* ShoppingSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3A72852B312BD4008A7581 /* ShoppingSearchView.swift */; };
 		9B60809F2B2E76770074909E /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 9B60809E2B2E76770074909E /* Quick */; };
 		9B6080A22B2E76A50074909E /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 9B6080A12B2E76A50074909E /* Nimble */; };
 		9B6080A42B2E7AF00074909E /* HTTPMethodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6080A32B2E7AF00074909E /* HTTPMethodTests.swift */; };
@@ -43,6 +46,9 @@
 /* Begin PBXFileReference section */
 		9B3A72792B3080F7008A7581 /* DataRequestMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequestMock.swift; sourceTree = "<group>"; };
 		9B3A727C2B31209A008A7581 /* ResponseDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDummy.swift; sourceTree = "<group>"; };
+		9B3A72802B312B3E008A7581 /* ShoppingSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchViewController.swift; sourceTree = "<group>"; };
+		9B3A72832B312B95008A7581 /* ShoppingSearchViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchViewType.swift; sourceTree = "<group>"; };
+		9B3A72852B312BD4008A7581 /* ShoppingSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchView.swift; sourceTree = "<group>"; };
 		9B6080A32B2E7AF00074909E /* HTTPMethodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethodTests.swift; sourceTree = "<group>"; };
 		9B6080A52B2E86330074909E /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
 		9B6080A82B2E867A0074909E /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
@@ -94,6 +100,32 @@
 			path = Dummies;
 			sourceTree = "<group>";
 		};
+		9B3A727E2B312B1E008A7581 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				9B3A727F2B312B24008A7581 /* Search */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		9B3A727F2B312B24008A7581 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				9B3A72822B312B86008A7581 /* Protocols */,
+				9B3A72802B312B3E008A7581 /* ShoppingSearchViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		9B3A72822B312B86008A7581 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9B3A72832B312B95008A7581 /* ShoppingSearchViewType.swift */,
+				9B3A72852B312BD4008A7581 /* ShoppingSearchView.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		9B6080A72B2E866D0074909E /* Doubles */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +166,7 @@
 		9BBF8C7E2B2E0B69000EB8C9 /* Shopping Search App */ = {
 			isa = PBXGroup;
 			children = (
+				9B3A727E2B312B1E008A7581 /* Scenes */,
 				9BBF8CAF2B2E10FC000EB8C9 /* Network */,
 				9BBF8C7F2B2E0B69000EB8C9 /* AppDelegate.swift */,
 				9BBF8C812B2E0B69000EB8C9 /* SceneDelegate.swift */,
@@ -313,8 +346,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B3A72842B312B95008A7581 /* ShoppingSearchViewType.swift in Sources */,
+				9B3A72812B312B3E008A7581 /* ShoppingSearchViewController.swift in Sources */,
 				9BBF8C842B2E0B69000EB8C9 /* ViewController.swift in Sources */,
 				9BBF8C802B2E0B69000EB8C9 /* AppDelegate.swift in Sources */,
+				9B3A72862B312BD4008A7581 /* ShoppingSearchView.swift in Sources */,
 				9BBF8C822B2E0B69000EB8C9 /* SceneDelegate.swift in Sources */,
 				9BBF8CB92B2E1199000EB8C9 /* NetworkServiceType.swift in Sources */,
 				9BBF8CBD2B2E126A000EB8C9 /* NetworkService.swift in Sources */,
