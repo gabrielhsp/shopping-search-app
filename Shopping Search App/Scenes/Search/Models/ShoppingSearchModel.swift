@@ -27,7 +27,7 @@ struct ShoppingSearchProductModel: Decodable, Equatable {
     let title: String
     let condition: String
     let thumbnail: String
-    let price: Int
+    let price: Double
     let originalPrice: Double?
     let salePrice: Double?
     let availableQuantity: Int
