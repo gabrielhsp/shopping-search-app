@@ -28,5 +28,6 @@ protocol ShoppingSearchRepositoryType {
 
 protocol ShoppingSearchViewType where Self: UIView {
     var didTapSearchButton: ((String?) -> Void)? { get set }
+    func setSearchButtonLoadingState(isLoading: Bool)
     func didReceiveSearchError(withMessage message: String)
 }

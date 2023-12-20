@@ -45,6 +45,7 @@ final class ShoppingSearchViewController: UIViewController {
 extension ShoppingSearchViewController: ShoppingSearchViewControllerType {
     func didRequestSearchSuccessfully(response: ShoppingSearchModel) {
         DispatchQueue.main.async { [weak self] in
+            self?.contentView.setSearchButtonLoadingState(isLoading: false)
             self?.delegate?.shoppingSearchViewController(didRequestSearchSuccessfullyWith: response)
         }
     }

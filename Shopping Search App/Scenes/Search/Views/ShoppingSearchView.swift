@@ -44,8 +44,8 @@ final class ShoppingSearchView: UIView {
         return view
     }()
     
-    private let searchButton: UIButton = {
-        let button = UIButton(type: .custom)
+    private let searchButton: ShoppingSearchButton = {
+        let button = ShoppingSearchButton(type: .custom)
         
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = .appColor(.action)
@@ -121,6 +121,7 @@ final class ShoppingSearchView: UIView {
     
     private func sendSearchButtonEvent() {
         searchTextField.resignFirstResponder()
+        searchButton.isLoading = true
         didTapSearchButton?(searchTextField.text)
     }
     
@@ -168,10 +169,16 @@ final class ShoppingSearchView: UIView {
 // MARK: - ShoppingSearchViewType
 extension ShoppingSearchView: ShoppingSearchViewType {
     func didReceiveSearchError(withMessage message: String) {
+        searchButton.isLoading = false
+        
         UIView.animate(withDuration: 0.3) { [weak self] in
             self?.searchFeedbackLabel.text = message
             self?.searchFeedbackLabel.alpha = 1
         }
+    }
+    
+    func setSearchButtonLoadingState(isLoading: Bool) {
+        searchButton.isLoading = isLoading
     }
 }
 
