@@ -16,6 +16,10 @@ protocol ShoppingSearchPresenterType: AnyObject {
     func didRequestSearch(withSearchText searchText: String?)
 }
 
+protocol ShoppingSearchRepositoryType {
+    func requestSearch(searchTerm: String, completion: @escaping (Result<ShoppingSearchModel, Error>) -> Void)
+}
+
 protocol ShoppingSearchViewType where Self: UIView {
     var didTapSearchButton: ((String?) -> Void)? { get set }
     func didReceiveSearchError(withMessage message: String)

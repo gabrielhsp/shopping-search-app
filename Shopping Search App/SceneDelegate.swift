@@ -16,7 +16,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let window = UIWindow(windowScene: windowScene)
-        let presenter = ShoppingSearchPresenter()
+        
+        let networkService = NetworkService()
+        let repository = ShoppingSearchRepository(networkService: networkService)
+        let presenter = ShoppingSearchPresenter(repository: repository)
         let shoppingSearchViewController = ShoppingSearchViewController(presenter: presenter)
         let navigationController = UINavigationController(rootViewController: shoppingSearchViewController)
         
