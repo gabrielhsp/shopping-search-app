@@ -24,6 +24,25 @@ final class ShoppingSearchView: UIView, ShoppingSearchViewType {
         return textField
     }()
     
+    private let searchFeedbackLabel: UILabel = {
+        let label = UILabel()
+        
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.numberOfLines = 0
+        label.textColor = .systemRed
+        label.font = .systemFont(ofSize: 14, weight: .regular)
+        
+        return label
+    }()
+    
+    private let searchSuggestionView: UIView = {
+        let view = UIView()
+        
+        view.translatesAutoresizingMaskIntoConstraints = false
+        
+        return view
+    }()
+    
     private let searchButton: UIButton = {
         let button = UIButton(type: .custom)
         
@@ -32,6 +51,7 @@ final class ShoppingSearchView: UIView, ShoppingSearchViewType {
         button.setTitle("Buscar", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.setCornerRadius(radius: 16)
+        button.titleLabel?.font = .boldSystemFont(ofSize: 18)
         
         return button
     }()
@@ -61,6 +81,8 @@ final class ShoppingSearchView: UIView, ShoppingSearchViewType {
     
     private func buildViewHierarchy() {
         addSubview(searchTextField)
+        addSubview(searchFeedbackLabel)
+        addSubview(searchSuggestionView)
         addSubview(searchButton)
     }
     
@@ -70,6 +92,15 @@ final class ShoppingSearchView: UIView, ShoppingSearchViewType {
             searchTextField.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -16),
             searchTextField.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 16),
             searchTextField.heightAnchor.constraint(equalToConstant: 50),
+            
+            searchFeedbackLabel.topAnchor.constraint(equalTo: searchTextField.bottomAnchor, constant: 8),
+            searchFeedbackLabel.trailingAnchor.constraint(equalTo: searchTextField.trailingAnchor),
+            searchFeedbackLabel.leadingAnchor.constraint(equalTo: searchTextField.leadingAnchor),
+            
+            searchSuggestionView.topAnchor.constraint(equalTo: searchFeedbackLabel.bottomAnchor, constant: 8),
+            searchSuggestionView.trailingAnchor.constraint(equalTo: searchTextField.trailingAnchor),
+            searchSuggestionView.leadingAnchor.constraint(equalTo: searchTextField.leadingAnchor),
+            searchSuggestionView.bottomAnchor.constraint(equalTo: searchButton.topAnchor, constant: -16),
             
             searchButton.trailingAnchor.constraint(equalTo: searchTextField.trailingAnchor),
             searchButton.leadingAnchor.constraint(equalTo: searchTextField.leadingAnchor),
@@ -83,6 +114,7 @@ final class ShoppingSearchView: UIView, ShoppingSearchViewType {
     private func setupAdditionalConfiguration() {
         backgroundColor = .appColor(.background)
         searchTextField.delegate = self
+        searchTextField.addTarget(self, action: #selector(updateSearchTextFieldFeedback(_:)), for: .editingChanged)
         searchButton.addTarget(self, action: #selector(addActionOnSearchButton), for: .touchUpInside)
     }
     
@@ -94,6 +126,15 @@ final class ShoppingSearchView: UIView, ShoppingSearchViewType {
     @objc
     private func addActionOnSearchButton() {
         sendSearchButtonEvent()
+    }
+    
+    @objc
+    private func updateSearchTextFieldFeedback(_ textField: UITextField) {
+        if let textFieldValue = textField.text, !textFieldValue.isEmpty {
+            UIView.animate(withDuration: 0.3) { [weak self] in
+                self?.searchFeedbackLabel.alpha = 0
+            }
+        }
     }
     
     private func registerKeyboardEvents() {
