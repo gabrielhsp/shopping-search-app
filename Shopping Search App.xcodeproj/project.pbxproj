@@ -337,6 +337,8 @@
 			dependencies = (
 			);
 			name = "Shopping Search App";
+			packageProductDependencies = (
+			);
 			productName = "Shopping Search App";
 			productReference = 9BBF8C7C2B2E0B69000EB8C9 /* Shopping Search App.app */;
 			productType = "com.apple.product-type.application";
