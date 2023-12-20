@@ -12,6 +12,7 @@ final class ShoppingSearchViewController: UIViewController {
     // MARK: - Properties
     private let presenter: ShoppingSearchPresenterType
     private let contentView: ShoppingSearchViewType
+    weak var delegate: ShoppingSearchViewControllerDelegate?
     
     // MARK: - Initializer Methods
     init(presenter: ShoppingSearchPresenterType,
@@ -42,7 +43,15 @@ final class ShoppingSearchViewController: UIViewController {
 
 // MARK: - ShoppingSearchViewControllerType
 extension ShoppingSearchViewController: ShoppingSearchViewControllerType {
+    func didRequestSearchSuccessfully(response: ShoppingSearchModel) {
+        DispatchQueue.main.async { [weak self] in
+            self?.delegate?.shoppingSearchViewController(didRequestSearchSuccessfullyWith: response)
+        }
+    }
+    
     func didReceiveSearchError(withMessage message: String) {
-        contentView.didReceiveSearchError(withMessage: message)
+        DispatchQueue.main.async { [weak self] in
+            self?.contentView.didReceiveSearchError(withMessage: message)
+        }
     }
 }
