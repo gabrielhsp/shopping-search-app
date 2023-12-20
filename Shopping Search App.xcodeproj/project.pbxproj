@@ -19,6 +19,9 @@
 		9B6080A92B2E867A0074909E /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6080A82B2E867A0074909E /* URLSessionMock.swift */; };
 		9B6080AC2B2E880E0074909E /* URLSessionDataTaskMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6080AB2B2E880E0074909E /* URLSessionDataTaskMock.swift */; };
 		9B96F2242B33702300A358D3 /* ShoppingSearchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B96F2232B33702300A358D3 /* ShoppingSearchButton.swift */; };
+		9B96F22C2B33B0BF00A358D3 /* ShoppingSearchPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B96F22B2B33B0BE00A358D3 /* ShoppingSearchPresenterTests.swift */; };
+		9B96F22F2B33B10400A358D3 /* ShoppingSearchRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B96F22E2B33B10400A358D3 /* ShoppingSearchRepositoryTests.swift */; };
+		9B96F2332B33B1D800A358D3 /* NetworkServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B96F2322B33B1D800A358D3 /* NetworkServiceMock.swift */; };
 		9BB96D422B31F3D600D193CD /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB96D412B31F3D600D193CD /* UIView+Extension.swift */; };
 		9BB96D452B31F58B00D193CD /* ShoppingSearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB96D442B31F58B00D193CD /* ShoppingSearchTextField.swift */; };
 		9BB96D472B31F93F00D193CD /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BB96D462B31F93F00D193CD /* Colors.xcassets */; };
@@ -63,6 +66,9 @@
 		9B6080AB2B2E880E0074909E /* URLSessionDataTaskMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskMock.swift; sourceTree = "<group>"; };
 		9B6080AD2B2E8EDE0074909E /* Shopping Search App.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Shopping Search App.xctestplan"; sourceTree = "<group>"; };
 		9B96F2232B33702300A358D3 /* ShoppingSearchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchButton.swift; sourceTree = "<group>"; };
+		9B96F22B2B33B0BE00A358D3 /* ShoppingSearchPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchPresenterTests.swift; sourceTree = "<group>"; };
+		9B96F22E2B33B10400A358D3 /* ShoppingSearchRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchRepositoryTests.swift; sourceTree = "<group>"; };
+		9B96F2322B33B1D800A358D3 /* NetworkServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceMock.swift; sourceTree = "<group>"; };
 		9BB96D412B31F3D600D193CD /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		9BB96D442B31F58B00D193CD /* ShoppingSearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchTextField.swift; sourceTree = "<group>"; };
 		9BB96D462B31F93F00D193CD /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -162,6 +168,79 @@
 				9B3A72792B3080F7008A7581 /* DataRequestMock.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		9B96F2252B33B00100A358D3 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				9B96F2262B33B00800A358D3 /* Search */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		9B96F2262B33B00800A358D3 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				9B96F22D2B33B0F000A358D3 /* Repository */,
+				9B96F2272B33B01000A358D3 /* Doubles */,
+				9B96F22A2B33B03400A358D3 /* Views */,
+				9B96F22B2B33B0BE00A358D3 /* ShoppingSearchPresenterTests.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		9B96F2272B33B01000A358D3 /* Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				9B96F2292B33B01A00A358D3 /* Mocks */,
+				9B96F2282B33B01500A358D3 /* Spies */,
+			);
+			path = Doubles;
+			sourceTree = "<group>";
+		};
+		9B96F2282B33B01500A358D3 /* Spies */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Spies;
+			sourceTree = "<group>";
+		};
+		9B96F2292B33B01A00A358D3 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		9B96F22A2B33B03400A358D3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9B96F22D2B33B0F000A358D3 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				9B96F22E2B33B10400A358D3 /* ShoppingSearchRepositoryTests.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		9B96F2302B33B1C300A358D3 /* TestHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				9B96F2312B33B1CB00A358D3 /* Network */,
+			);
+			path = TestHelpers;
+			sourceTree = "<group>";
+		};
+		9B96F2312B33B1CB00A358D3 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9B96F2322B33B1D800A358D3 /* NetworkServiceMock.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		9BB96D3F2B31F3BD00D193CD /* Helpers */ = {
@@ -270,8 +349,10 @@
 		9BBF8C952B2E0B6E000EB8C9 /* Shopping Search AppTests */ = {
 			isa = PBXGroup;
 			children = (
+				9B96F2302B33B1C300A358D3 /* TestHelpers */,
 				9B6080AD2B2E8EDE0074909E /* Shopping Search App.xctestplan */,
 				9BBF8CBE2B2E1E49000EB8C9 /* Network */,
+				9B96F2252B33B00100A358D3 /* Scenes */,
 			);
 			path = "Shopping Search AppTests";
 			sourceTree = "<group>";
@@ -463,12 +544,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B96F2332B33B1D800A358D3 /* NetworkServiceMock.swift in Sources */,
+				9B96F22F2B33B10400A358D3 /* ShoppingSearchRepositoryTests.swift in Sources */,
 				9B6080A92B2E867A0074909E /* URLSessionMock.swift in Sources */,
 				9B3A727A2B3080F7008A7581 /* DataRequestMock.swift in Sources */,
 				9B6080A42B2E7AF00074909E /* HTTPMethodTests.swift in Sources */,
 				9B6080A62B2E86330074909E /* NetworkServiceTests.swift in Sources */,
 				9BBF8CC12B2E1E6E000EB8C9 /* ErrorResponseTests.swift in Sources */,
 				9B6080AC2B2E880E0074909E /* URLSessionDataTaskMock.swift in Sources */,
+				9B96F22C2B33B0BF00A358D3 /* ShoppingSearchPresenterTests.swift in Sources */,
 				9B3A727D2B31209A008A7581 /* ResponseDummy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
