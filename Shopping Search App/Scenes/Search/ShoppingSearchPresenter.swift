@@ -18,16 +18,27 @@ final class ShoppingSearchPresenter {
     
     // MARK: - Private Methods
     private func requestSearch(searchTerm: String) {
-        repository.requestSearch(searchTerm: searchTerm) { result in
+        repository.requestSearch(searchTerm: searchTerm) { [weak self] result in
             switch result {
             case .success(let response):
-                print("requestSearch success", response)
+                self?.handleRequestSearchSuccess(response: response)
             case .failure(let error):
-                print("requestSearch error", error)
+                self?.handleRequestSearchError(error: error)
             }
         }
+    }
+    
+    private func handleRequestSearchSuccess(response: ShoppingSearchModel) {
+        guard !response.results.isEmpty else {
+            controller?.didReceiveSearchError(withMessage: "Sua busca não retornou nenhum resultado. Por favor, tente novamente.")
+            return
+        }
         
-        // TODO: - Add repository implementation here
+        controller?.didRequestSearchSuccessfully(response: response)
+    }
+    
+    private func handleRequestSearchError(error: Error) {
+        controller?.didReceiveSearchError(withMessage: "Houve um erro ao realizar sua busca. Por favor, tente novamente.")
     }
 }
 
