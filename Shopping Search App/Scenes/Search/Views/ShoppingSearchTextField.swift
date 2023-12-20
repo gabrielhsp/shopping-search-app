@@ -39,7 +39,7 @@ final class ShoppingSearchTextField: UITextField {
     private func setupFieldConfiguration() {
         autocorrectionType = .no
         autocapitalizationType = .none
-        clearButtonMode = .whileEditing
+        clearButtonMode = .always
     }
     
     private func setupFieldLayout() {
