@@ -48,11 +48,6 @@ final class ShoppingSearchView: UIView {
         let button = ShoppingSearchButton(type: .custom)
         
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = .appColor(.action)
-        button.setTitle("Buscar", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.setCornerRadius(radius: 16)
-        button.titleLabel?.font = .boldSystemFont(ofSize: 18)
         
         return button
     }()

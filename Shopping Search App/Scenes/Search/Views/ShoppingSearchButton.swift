@@ -40,6 +40,7 @@ final class ShoppingSearchButton: UIButton {
     private func setup() {
         buildViewHierarchy()
         setupConstraints()
+        setupAdditionalConfiguration()
     }
     
     private func buildViewHierarchy() {
@@ -51,6 +52,14 @@ final class ShoppingSearchButton: UIButton {
             spinner.centerXAnchor.constraint(equalTo: centerXAnchor),
             spinner.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
+    }
+    
+    private func setupAdditionalConfiguration() {
+        backgroundColor = .appColor(.action)
+        setTitle("Buscar", for: .normal)
+        setTitleColor(.white, for: .normal)
+        setCornerRadius(radius: 16)
+        titleLabel?.font = .boldSystemFont(ofSize: 18)
     }
     
     private func setupLoading() {
