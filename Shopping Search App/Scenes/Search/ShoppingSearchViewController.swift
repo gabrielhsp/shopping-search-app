@@ -10,13 +10,17 @@ import UIKit
 
 final class ShoppingSearchViewController: UIViewController {
     // MARK: - Properties
+    private let presenter: ShoppingSearchPresenterType
     private let contentView: ShoppingSearchViewType
     
     // MARK: - Initializer Methods
-    init(contentView: ShoppingSearchViewType = ShoppingSearchView()) {
+    init(presenter: ShoppingSearchPresenterType,
+         contentView: ShoppingSearchViewType = ShoppingSearchView()) {
+        self.presenter = presenter
         self.contentView = contentView
         super.init(nibName: nil, bundle: nil)
         bindLayoutEvents()
+        self.presenter.controller = self
     }
     
     required init?(coder: NSCoder) {
@@ -30,8 +34,15 @@ final class ShoppingSearchViewController: UIViewController {
     
     // MARK: - Private Methods
     private func bindLayoutEvents() {
-        contentView.didTapSearchButton = { searchText in
-            print("searchText", searchText)
+        contentView.didTapSearchButton = { [weak self] searchText in
+            self?.presenter.didRequestSearch(withSearchText: searchText)
         }
+    }
+}
+
+// MARK: - ShoppingSearchViewControllerType
+extension ShoppingSearchViewController: ShoppingSearchViewControllerType {
+    func didReceiveSearchError(withMessage message: String) {
+        contentView.didReceiveSearchError(withMessage: message)
     }
 }

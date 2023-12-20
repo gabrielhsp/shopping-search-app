@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ShoppingSearchView: UIView, ShoppingSearchViewType {
+final class ShoppingSearchView: UIView {
     // MARK: - Private Properties
     private let notificationCenter: NotificationCenterProtocol
     private var bottomConstraint: NSLayoutConstraint?
@@ -28,6 +28,7 @@ final class ShoppingSearchView: UIView, ShoppingSearchViewType {
         let label = UILabel()
         
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.alpha = 0
         label.numberOfLines = 0
         label.textColor = .systemRed
         label.font = .systemFont(ofSize: 14, weight: .regular)
@@ -161,6 +162,16 @@ final class ShoppingSearchView: UIView, ShoppingSearchViewType {
     
     private func updateBottomConstraint(constant: CGFloat) {
         bottomConstraint?.constant = constant
+    }
+}
+
+// MARK: - ShoppingSearchViewType
+extension ShoppingSearchView: ShoppingSearchViewType {
+    func didReceiveSearchError(withMessage message: String) {
+        UIView.animate(withDuration: 0.3) { [weak self] in
+            self?.searchFeedbackLabel.text = message
+            self?.searchFeedbackLabel.alpha = 1
+        }
     }
 }
 
