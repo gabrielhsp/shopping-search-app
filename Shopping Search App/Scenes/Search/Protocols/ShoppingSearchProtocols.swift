@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol ShoppingSearchViewControllerDelegate: AnyObject {
+    func shoppingSearchViewController(didRequestSearchSuccessfullyWith response: ShoppingSearchModel)
+}
+
 protocol ShoppingSearchViewControllerType: AnyObject {
+    var delegate: ShoppingSearchViewControllerDelegate? { get set }
+    func didRequestSearchSuccessfully(response: ShoppingSearchModel)
     func didReceiveSearchError(withMessage message: String)
 }
 
