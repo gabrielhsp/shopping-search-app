@@ -12,8 +12,6 @@
 		9B3A72812B312B3E008A7581 /* ShoppingSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3A72802B312B3E008A7581 /* ShoppingSearchViewController.swift */; };
 		9B3A72842B312B95008A7581 /* ShoppingSearchProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3A72832B312B95008A7581 /* ShoppingSearchProtocols.swift */; };
 		9B3A72862B312BD4008A7581 /* ShoppingSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B3A72852B312BD4008A7581 /* ShoppingSearchView.swift */; };
-		9B60809F2B2E76770074909E /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 9B60809E2B2E76770074909E /* Quick */; };
-		9B6080A22B2E76A50074909E /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 9B6080A12B2E76A50074909E /* Nimble */; };
 		9B6080A42B2E7AF00074909E /* HTTPMethodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6080A32B2E7AF00074909E /* HTTPMethodTests.swift */; };
 		9B6080A62B2E86330074909E /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6080A52B2E86330074909E /* NetworkServiceTests.swift */; };
 		9B6080A92B2E867A0074909E /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6080A82B2E867A0074909E /* URLSessionMock.swift */; };
@@ -32,6 +30,8 @@
 		9B96F2442B33CFD800A358D3 /* ShoppingSearchViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B96F2432B33CFD800A358D3 /* ShoppingSearchViewSpy.swift */; };
 		9B96F2462B33D49B00A358D3 /* DispatchQueueProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B96F2452B33D49A00A358D3 /* DispatchQueueProtocol.swift */; };
 		9B96F2492B33D58100A358D3 /* DispatchQueueSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B96F2482B33D58100A358D3 /* DispatchQueueSpy.swift */; };
+		9B96F24D2B33DE3000A358D3 /* Nimble-Snapshots in Frameworks */ = {isa = PBXBuildFile; productRef = 9B96F24C2B33DE3000A358D3 /* Nimble-Snapshots */; };
+		9B96F2502B33DE7B00A358D3 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 9B96F24F2B33DE7B00A358D3 /* Quick */; };
 		9BB96D422B31F3D600D193CD /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB96D412B31F3D600D193CD /* UIView+Extension.swift */; };
 		9BB96D452B31F58B00D193CD /* ShoppingSearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB96D442B31F58B00D193CD /* ShoppingSearchTextField.swift */; };
 		9BB96D472B31F93F00D193CD /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BB96D462B31F93F00D193CD /* Colors.xcassets */; };
@@ -126,8 +126,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B60809F2B2E76770074909E /* Quick in Frameworks */,
-				9B6080A22B2E76A50074909E /* Nimble in Frameworks */,
+				9B96F2502B33DE7B00A358D3 /* Quick in Frameworks */,
+				9B96F24D2B33DE3000A358D3 /* Nimble-Snapshots in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,8 +488,8 @@
 			);
 			name = "Shopping Search AppTests";
 			packageProductDependencies = (
-				9B60809E2B2E76770074909E /* Quick */,
-				9B6080A12B2E76A50074909E /* Nimble */,
+				9B96F24C2B33DE3000A358D3 /* Nimble-Snapshots */,
+				9B96F24F2B33DE7B00A358D3 /* Quick */,
 			);
 			productName = "Shopping Search AppTests";
 			productReference = 9BBF8C922B2E0B6E000EB8C9 /* Shopping Search AppTests.xctest */;
@@ -525,8 +525,8 @@
 			);
 			mainGroup = 9BBF8C732B2E0B69000EB8C9;
 			packageReferences = (
-				9B60809D2B2E76770074909E /* XCRemoteSwiftPackageReference "Quick" */,
-				9B6080A02B2E76A50074909E /* XCRemoteSwiftPackageReference "Nimble" */,
+				9B96F24B2B33DE3000A358D3 /* XCRemoteSwiftPackageReference "Nimble-Snapshots" */,
+				9B96F24E2B33DE7B00A358D3 /* XCRemoteSwiftPackageReference "Quick" */,
 			);
 			productRefGroup = 9BBF8C7D2B2E0B69000EB8C9 /* Products */;
 			projectDirPath = "";
@@ -896,7 +896,15 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		9B60809D2B2E76770074909E /* XCRemoteSwiftPackageReference "Quick" */ = {
+		9B96F24B2B33DE3000A358D3 /* XCRemoteSwiftPackageReference "Nimble-Snapshots" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ashfurrow/Nimble-Snapshots.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.6.1;
+			};
+		};
+		9B96F24E2B33DE7B00A358D3 /* XCRemoteSwiftPackageReference "Quick" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Quick/Quick.git";
 			requirement = {
@@ -904,26 +912,18 @@
 				minimumVersion = 7.3.0;
 			};
 		};
-		9B6080A02B2E76A50074909E /* XCRemoteSwiftPackageReference "Nimble" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Quick/Nimble";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 13.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		9B60809E2B2E76770074909E /* Quick */ = {
+		9B96F24C2B33DE3000A358D3 /* Nimble-Snapshots */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9B60809D2B2E76770074909E /* XCRemoteSwiftPackageReference "Quick" */;
-			productName = Quick;
+			package = 9B96F24B2B33DE3000A358D3 /* XCRemoteSwiftPackageReference "Nimble-Snapshots" */;
+			productName = "Nimble-Snapshots";
 		};
-		9B6080A12B2E76A50074909E /* Nimble */ = {
+		9B96F24F2B33DE7B00A358D3 /* Quick */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 9B6080A02B2E76A50074909E /* XCRemoteSwiftPackageReference "Nimble" */;
-			productName = Nimble;
+			package = 9B96F24E2B33DE7B00A358D3 /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -19,12 +19,30 @@
       }
     },
     {
+      "identity" : "ios-snapshot-test-case",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/uber/ios-snapshot-test-case.git",
+      "state" : {
+        "revision" : "7b10770333a961be6e5a41c9ce04b8c6d3990126",
+        "version" : "8.0.0"
+      }
+    },
+    {
       "identity" : "nimble",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Quick/Nimble",
+      "location" : "https://github.com/Quick/Nimble.git",
       "state" : {
-        "revision" : "d616f15123bfb36db1b1075153f73cf40605b39d",
-        "version" : "13.0.0"
+        "revision" : "edaedc1ec86f14ac6e2ca495b94f0ff7150d98d0",
+        "version" : "12.3.0"
+      }
+    },
+    {
+      "identity" : "nimble-snapshots",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ashfurrow/Nimble-Snapshots.git",
+      "state" : {
+        "revision" : "2b9090ab302ad2834f47929473f4bfd064db030e",
+        "version" : "9.6.1"
       }
     },
     {

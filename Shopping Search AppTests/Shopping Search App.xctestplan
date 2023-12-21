@@ -9,6 +9,15 @@
     }
   ],
   "defaultOptions" : {
+    "codeCoverage" : {
+      "targets" : [
+        {
+          "containerPath" : "container:Shopping Search App.xcodeproj",
+          "identifier" : "9BBF8C7B2B2E0B69000EB8C9",
+          "name" : "Shopping Search App"
+        }
+      ]
+    },
     "targetForVariableExpansion" : {
       "containerPath" : "container:Shopping Search App.xcodeproj",
       "identifier" : "9BBF8C7B2B2E0B69000EB8C9",
