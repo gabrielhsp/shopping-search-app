@@ -8,25 +8,27 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
+    // MARK: - Properties
+    private let navigationController = UINavigationController()
+    private let networkService: NetworkServiceType = NetworkService(urlSession: URLSession.shared)
+    private var shoppingSearchCoordinator: CoordinatorProtocol?
     var window: UIWindow?
 
-
+    // MARK: - UIWindowSceneDelegate Methods
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         let window = UIWindow(windowScene: windowScene)
         
-        let networkService = NetworkService()
-        let repository = ShoppingSearchRepository(networkService: networkService)
-        let presenter = ShoppingSearchPresenter(repository: repository)
-        let shoppingSearchViewController = ShoppingSearchViewController(presenter: presenter)
-        let navigationController = UINavigationController(rootViewController: shoppingSearchViewController)
+        self.window = window
         
         window.rootViewController = navigationController
-        
-        self.window = window
         window.makeKeyAndVisible()
+        
+        shoppingSearchCoordinator = ShoppingSearchCoordinator(navigationController: navigationController,
+                                                              networkService: networkService)
+        
+        shoppingSearchCoordinator?.start(navigationType: .push)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
