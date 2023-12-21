@@ -43,6 +43,12 @@ final class ShoppingSearchViewControllerTests: QuickSpec {
             }
         }
         
+        describe("#viewDidLoad") {
+            it("should set a title for the view controller") {
+                expect(sut.title).to(equal("Busca"))
+            }
+        }
+        
         describe("#bindLayoutEvents") {
             context("when did tap search button is called on content view") {
                 let dummySearchTerm = "dummy"

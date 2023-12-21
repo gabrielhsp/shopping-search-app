@@ -36,6 +36,11 @@ final class ShoppingSearchViewController: UIViewController {
         view = contentView
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = "Busca"
+    }
+    
     // MARK: - Private Methods
     private func bindLayoutEvents() {
         contentView.didTapSearchButton = { [weak self] searchText in

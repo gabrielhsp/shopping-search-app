@@ -146,14 +146,14 @@ final class ShoppingSearchView: UIView {
                 return
             }
             
-            self?.updateBottomConstraint(constant: -keyboardSize.height)
+            self?.updateBottomConstraint(constant: -(keyboardSize.height + 16))
         })
         
         _ = notificationCenter.addObserver(forName: UIResponder.keyboardWillHideNotification,
                                            object: nil,
                                            queue: nil,
                                            using: { [weak self] _ in
-            self?.updateBottomConstraint(constant: .zero)
+            self?.updateBottomConstraint(constant: -16)
         })
     }
     
