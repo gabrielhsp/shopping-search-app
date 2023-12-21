@@ -8,10 +8,13 @@
 import UIKit
 
 protocol ShoppingSearchProductsListViewControllerType: AnyObject {
+    func didRequestProductsSuccessfully(dataSource: ShoppingSearchProductsListDataSource)
 }
 
 protocol ShoppingSearchProductsListPresenterType: AnyObject {
+    func getProductsList()
 }
 
 protocol ShoppingSearchProductsListViewType where Self: UIView {
+    func setDataSource(dataSource: ShoppingSearchProductsListDataSource)
 }

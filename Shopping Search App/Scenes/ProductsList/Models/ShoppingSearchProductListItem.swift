@@ -11,7 +11,7 @@ struct ShoppingSearchProductListItem: Equatable {
     let id: String
     let image: String
     let name: String
-    let originalPrice: String
+    let originalPrice: String?
     let promotionalPrice: String?
     let isFreeDelivered: Bool
     let condition: Condition

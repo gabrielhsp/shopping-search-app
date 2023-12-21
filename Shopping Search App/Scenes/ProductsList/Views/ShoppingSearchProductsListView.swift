@@ -60,4 +60,11 @@ final class ShoppingSearchProductsListView: UIView {
 
 // MARK: - ShoppingSearchProductsListViewType
 extension ShoppingSearchProductsListView: ShoppingSearchProductsListViewType {
+    func setDataSource(dataSource: ShoppingSearchProductsListDataSource) {
+        self.dataSource = dataSource
+        
+        tableView.delegate = dataSource
+        tableView.dataSource = dataSource
+        tableView.reloadData()
+    }
 }

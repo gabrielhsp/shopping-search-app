@@ -11,11 +11,14 @@ final class ShoppingSearchProductsListViewController: UIViewController {
     // MARK: - Properties
     private let presenter: ShoppingSearchProductsListPresenterType
     private let contentView: ShoppingSearchProductsListViewType
+    private let dispatchQueue: DispatchQueueProtocol
     
     init(presenter: ShoppingSearchProductsListPresenterType,
-         contentView: ShoppingSearchProductsListViewType = ShoppingSearchProductsListView()) {
+         contentView: ShoppingSearchProductsListViewType = ShoppingSearchProductsListView(),
+         dispatchQueue: DispatchQueueProtocol = DispatchQueue.main) {
         self.presenter = presenter
         self.contentView = contentView
+        self.dispatchQueue = dispatchQueue
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -35,5 +38,9 @@ final class ShoppingSearchProductsListViewController: UIViewController {
 
 // MARK: - ShoppingSearchProductsListViewControllerType
 extension ShoppingSearchProductsListViewController: ShoppingSearchProductsListViewControllerType {
-    
+    func didRequestProductsSuccessfully(dataSource: ShoppingSearchProductsListDataSource) {
+        dispatchQueue.async { [weak self] in
+            self?.contentView.setDataSource(dataSource: dataSource)
+        }
+    }
 }
