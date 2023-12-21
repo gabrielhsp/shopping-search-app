@@ -21,14 +21,3 @@ struct ShoppingSearchModel: Decodable, Equatable {
         let limit: Int
     }
 }
-
-struct ShoppingSearchProductModel: Decodable, Equatable {
-    let id: String
-    let title: String
-    let condition: String
-    let thumbnail: String
-    let price: Double
-    let originalPrice: Double?
-    let salePrice: Double?
-    let availableQuantity: Int
-}
