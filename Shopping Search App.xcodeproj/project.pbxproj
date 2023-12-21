@@ -54,6 +54,9 @@
 		9BBF8CBD2B2E126A000EB8C9 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBF8CBC2B2E126A000EB8C9 /* NetworkService.swift */; };
 		9BBF8CC12B2E1E6E000EB8C9 /* ErrorResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBF8CC02B2E1E6E000EB8C9 /* ErrorResponseTests.swift */; };
 		9BFF70CE2B3484E100F2D856 /* ShoppingSearchDataRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFF70CD2B3484E100F2D856 /* ShoppingSearchDataRequestTests.swift */; };
+		9BFF70D32B348F8E00F2D856 /* ShoppingSearchProductsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFF70D22B348F8E00F2D856 /* ShoppingSearchProductsListViewController.swift */; };
+		9BFF70D52B34900A00F2D856 /* ShoppingSearchProductsListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFF70D42B34900A00F2D856 /* ShoppingSearchProductsListProtocols.swift */; };
+		9BFF70D92B34917B00F2D856 /* ShoppingSearchProductsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFF70D82B34917B00F2D856 /* ShoppingSearchProductsListPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +119,9 @@
 		9BBF8CBC2B2E126A000EB8C9 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		9BBF8CC02B2E1E6E000EB8C9 /* ErrorResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponseTests.swift; sourceTree = "<group>"; };
 		9BFF70CD2B3484E100F2D856 /* ShoppingSearchDataRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchDataRequestTests.swift; sourceTree = "<group>"; };
+		9BFF70D22B348F8E00F2D856 /* ShoppingSearchProductsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchProductsListViewController.swift; sourceTree = "<group>"; };
+		9BFF70D42B34900A00F2D856 /* ShoppingSearchProductsListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchProductsListProtocols.swift; sourceTree = "<group>"; };
+		9BFF70D82B34917B00F2D856 /* ShoppingSearchProductsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchProductsListPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +155,7 @@
 		9B3A727E2B312B1E008A7581 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				9BFF70CF2B348F6300F2D856 /* ProductsList */,
 				9B3A727F2B312B24008A7581 /* Search */,
 			);
 			path = Scenes;
@@ -465,6 +472,32 @@
 			path = Request;
 			sourceTree = "<group>";
 		};
+		9BFF70CF2B348F6300F2D856 /* ProductsList */ = {
+			isa = PBXGroup;
+			children = (
+				9BFF70D02B348F7200F2D856 /* Protocols */,
+				9BFF70D12B348F7700F2D856 /* Views */,
+				9BFF70D22B348F8E00F2D856 /* ShoppingSearchProductsListViewController.swift */,
+				9BFF70D82B34917B00F2D856 /* ShoppingSearchProductsListPresenter.swift */,
+			);
+			path = ProductsList;
+			sourceTree = "<group>";
+		};
+		9BFF70D02B348F7200F2D856 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9BFF70D42B34900A00F2D856 /* ShoppingSearchProductsListProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		9BFF70D12B348F7700F2D856 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -581,12 +614,14 @@
 				9B96F2462B33D49B00A358D3 /* DispatchQueueProtocol.swift in Sources */,
 				9BB96D452B31F58B00D193CD /* ShoppingSearchTextField.swift in Sources */,
 				9B3A72812B312B3E008A7581 /* ShoppingSearchViewController.swift in Sources */,
+				9BFF70D32B348F8E00F2D856 /* ShoppingSearchProductsListViewController.swift in Sources */,
 				9BB96D4D2B3247BA00D193CD /* NotificationCenterProtocol.swift in Sources */,
 				9BB96D4A2B31FA1400D193CD /* Colors.swift in Sources */,
 				9BBF8C802B2E0B69000EB8C9 /* AppDelegate.swift in Sources */,
 				9B3A72862B312BD4008A7581 /* ShoppingSearchView.swift in Sources */,
 				9B96F2242B33702300A358D3 /* ShoppingSearchButton.swift in Sources */,
 				9BB96D532B327DD200D193CD /* ShoppingSearchRepository.swift in Sources */,
+				9BFF70D52B34900A00F2D856 /* ShoppingSearchProductsListProtocols.swift in Sources */,
 				9BBF8C822B2E0B69000EB8C9 /* SceneDelegate.swift in Sources */,
 				9BBF8CB92B2E1199000EB8C9 /* NetworkServiceType.swift in Sources */,
 				9BB96D422B31F3D600D193CD /* UIView+Extension.swift in Sources */,
@@ -597,6 +632,7 @@
 				9BBF8CB52B2E1160000EB8C9 /* HTTPMethod.swift in Sources */,
 				9BB96D4F2B32792C00D193CD /* ShoppingSearchPresenter.swift in Sources */,
 				9BBF8CB32B2E114B000EB8C9 /* DataRequest.swift in Sources */,
+				9BFF70D92B34917B00F2D856 /* ShoppingSearchProductsListPresenter.swift in Sources */,
 				9BB96D562B327EF900D193CD /* ShoppingSearchDataRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
