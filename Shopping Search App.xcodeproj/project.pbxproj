@@ -30,6 +30,8 @@
 		9B96F2402B33CE4700A358D3 /* ShoppingSearchPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B96F23F2B33CE4700A358D3 /* ShoppingSearchPresenterSpy.swift */; };
 		9B96F2422B33CF1A00A358D3 /* ShoppingSearchViewControllerDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B96F2412B33CF1A00A358D3 /* ShoppingSearchViewControllerDelegateSpy.swift */; };
 		9B96F2442B33CFD800A358D3 /* ShoppingSearchViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B96F2432B33CFD800A358D3 /* ShoppingSearchViewSpy.swift */; };
+		9B96F2462B33D49B00A358D3 /* DispatchQueueProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B96F2452B33D49A00A358D3 /* DispatchQueueProtocol.swift */; };
+		9B96F2492B33D58100A358D3 /* DispatchQueueSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B96F2482B33D58100A358D3 /* DispatchQueueSpy.swift */; };
 		9BB96D422B31F3D600D193CD /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB96D412B31F3D600D193CD /* UIView+Extension.swift */; };
 		9BB96D452B31F58B00D193CD /* ShoppingSearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB96D442B31F58B00D193CD /* ShoppingSearchTextField.swift */; };
 		9BB96D472B31F93F00D193CD /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BB96D462B31F93F00D193CD /* Colors.xcassets */; };
@@ -85,6 +87,8 @@
 		9B96F23F2B33CE4700A358D3 /* ShoppingSearchPresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchPresenterSpy.swift; sourceTree = "<group>"; };
 		9B96F2412B33CF1A00A358D3 /* ShoppingSearchViewControllerDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchViewControllerDelegateSpy.swift; sourceTree = "<group>"; };
 		9B96F2432B33CFD800A358D3 /* ShoppingSearchViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchViewSpy.swift; sourceTree = "<group>"; };
+		9B96F2452B33D49A00A358D3 /* DispatchQueueProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueProtocol.swift; sourceTree = "<group>"; };
+		9B96F2482B33D58100A358D3 /* DispatchQueueSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueSpy.swift; sourceTree = "<group>"; };
 		9BB96D412B31F3D600D193CD /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		9BB96D442B31F58B00D193CD /* ShoppingSearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchTextField.swift; sourceTree = "<group>"; };
 		9BB96D462B31F93F00D193CD /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -253,6 +257,7 @@
 		9B96F2302B33B1C300A358D3 /* TestHelpers */ = {
 			isa = PBXGroup;
 			children = (
+				9B96F2472B33D57700A358D3 /* Protocols */,
 				9B96F2312B33B1CB00A358D3 /* Network */,
 			);
 			path = TestHelpers;
@@ -273,6 +278,14 @@
 				9B96F23B2B33C36600A358D3 /* ShoppingSearchProductModel+Stub.swift */,
 			);
 			path = Stubs;
+			sourceTree = "<group>";
+		};
+		9B96F2472B33D57700A358D3 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9B96F2482B33D58100A358D3 /* DispatchQueueSpy.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		9BB96D3F2B31F3BD00D193CD /* Helpers */ = {
@@ -316,6 +329,7 @@
 			isa = PBXGroup;
 			children = (
 				9BB96D4C2B3247BA00D193CD /* NotificationCenterProtocol.swift */,
+				9B96F2452B33D49A00A358D3 /* DispatchQueueProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -550,6 +564,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B3A72842B312B95008A7581 /* ShoppingSearchProtocols.swift in Sources */,
+				9B96F2462B33D49B00A358D3 /* DispatchQueueProtocol.swift in Sources */,
 				9BB96D452B31F58B00D193CD /* ShoppingSearchTextField.swift in Sources */,
 				9B3A72812B312B3E008A7581 /* ShoppingSearchViewController.swift in Sources */,
 				9BB96D4D2B3247BA00D193CD /* NotificationCenterProtocol.swift in Sources */,
@@ -587,6 +602,7 @@
 				9B6080A62B2E86330074909E /* NetworkServiceTests.swift in Sources */,
 				9B96F23C2B33C36600A358D3 /* ShoppingSearchProductModel+Stub.swift in Sources */,
 				9BBF8CC12B2E1E6E000EB8C9 /* ErrorResponseTests.swift in Sources */,
+				9B96F2492B33D58100A358D3 /* DispatchQueueSpy.swift in Sources */,
 				9B96F2402B33CE4700A358D3 /* ShoppingSearchPresenterSpy.swift in Sources */,
 				9B6080AC2B2E880E0074909E /* URLSessionDataTaskMock.swift in Sources */,
 				9B96F2352B33BE0400A358D3 /* ShoppingSearchRepositoryMock.swift in Sources */,

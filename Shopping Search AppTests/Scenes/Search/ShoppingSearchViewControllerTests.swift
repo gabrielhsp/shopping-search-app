@@ -14,15 +14,18 @@ final class ShoppingSearchViewControllerTests: QuickSpec {
     override class func spec() {
         var presenterSpy: ShoppingSearchPresenterSpy!
         var contentViewSpy: ShoppingSearchViewSpy!
+        var dispatchQueueSpy: DispatchQueueSpy!
         var delegateSpy: ShoppingSearchViewControllerDelegateSpy!
         var sut: ShoppingSearchViewController!
         
         beforeEach {
             presenterSpy = ShoppingSearchPresenterSpy()
             contentViewSpy = ShoppingSearchViewSpy()
+            dispatchQueueSpy = DispatchQueueSpy()
             delegateSpy = ShoppingSearchViewControllerDelegateSpy()
             sut = ShoppingSearchViewController(presenter: presenterSpy,
-                                               contentView: contentViewSpy)
+                                               contentView: contentViewSpy,
+                                               dispatchQueue: dispatchQueueSpy)
             
             sut.delegate = delegateSpy
             sut.loadViewIfNeeded()
