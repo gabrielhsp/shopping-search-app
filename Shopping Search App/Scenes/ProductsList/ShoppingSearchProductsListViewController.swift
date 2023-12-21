@@ -13,7 +13,7 @@ final class ShoppingSearchProductsListViewController: UIViewController {
     private let contentView: ShoppingSearchProductsListViewType
     
     init(presenter: ShoppingSearchProductsListPresenterType,
-         contentView: ShoppingSearchProductsListViewType) {
+         contentView: ShoppingSearchProductsListViewType = ShoppingSearchProductsListView()) {
         self.presenter = presenter
         self.contentView = contentView
         super.init(nibName: nil, bundle: nil)
