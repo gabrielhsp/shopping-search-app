@@ -33,6 +33,7 @@ final class ShoppingSearchProductsListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter.getProductsList()
     }
 }
 

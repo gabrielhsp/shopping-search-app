@@ -61,6 +61,7 @@
 		9BFF70DE2B34986700F2D856 /* ShoppingSearchProductsListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFF70DD2B34986700F2D856 /* ShoppingSearchProductsListDataSource.swift */; };
 		9BFF70E12B34AD4700F2D856 /* ShoppingSearchProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFF70E02B34AD4700F2D856 /* ShoppingSearchProductModel.swift */; };
 		9BFF70E32B34AD6500F2D856 /* ShoppingSearchProductListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFF70E22B34AD6500F2D856 /* ShoppingSearchProductListItem.swift */; };
+		9BFF70E52B34D48A00F2D856 /* ShoppingSearchProductsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFF70E42B34D48A00F2D856 /* ShoppingSearchProductsListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +131,7 @@
 		9BFF70DD2B34986700F2D856 /* ShoppingSearchProductsListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchProductsListDataSource.swift; sourceTree = "<group>"; };
 		9BFF70E02B34AD4700F2D856 /* ShoppingSearchProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchProductModel.swift; sourceTree = "<group>"; };
 		9BFF70E22B34AD6500F2D856 /* ShoppingSearchProductListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchProductListItem.swift; sourceTree = "<group>"; };
+		9BFF70E42B34D48A00F2D856 /* ShoppingSearchProductsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchProductsListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -506,6 +508,7 @@
 			isa = PBXGroup;
 			children = (
 				9BFF70DA2B3496B200F2D856 /* ShoppingSearchProductsListView.swift */,
+				9BFF70E42B34D48A00F2D856 /* ShoppingSearchProductsListCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -648,6 +651,7 @@
 				9BB96D4A2B31FA1400D193CD /* Colors.swift in Sources */,
 				9BBF8C802B2E0B69000EB8C9 /* AppDelegate.swift in Sources */,
 				9B3A72862B312BD4008A7581 /* ShoppingSearchView.swift in Sources */,
+				9BFF70E52B34D48A00F2D856 /* ShoppingSearchProductsListCell.swift in Sources */,
 				9B96F2242B33702300A358D3 /* ShoppingSearchButton.swift in Sources */,
 				9BB96D532B327DD200D193CD /* ShoppingSearchRepository.swift in Sources */,
 				9BFF70D52B34900A00F2D856 /* ShoppingSearchProductsListProtocols.swift in Sources */,

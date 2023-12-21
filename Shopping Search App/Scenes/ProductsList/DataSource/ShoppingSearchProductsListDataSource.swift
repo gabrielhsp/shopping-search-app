@@ -21,7 +21,17 @@ extension ShoppingSearchProductsListDataSource: UITableViewDelegate & UITableVie
         return items.count
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let identifier = String(describing: ShoppingSearchProductsListCell.self)
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as? ShoppingSearchProductsListCell else {
+            return UITableViewCell()
+        }
+        
+        return cell
     }
 }
