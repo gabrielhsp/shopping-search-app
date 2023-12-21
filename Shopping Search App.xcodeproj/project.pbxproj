@@ -26,6 +26,10 @@
 		9B96F2372B33BEF300A358D3 /* ShoppingSearchViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B96F2362B33BEF300A358D3 /* ShoppingSearchViewControllerSpy.swift */; };
 		9B96F23A2B33C13300A358D3 /* ShoppingSearchModel+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B96F2392B33C13300A358D3 /* ShoppingSearchModel+Stub.swift */; };
 		9B96F23C2B33C36600A358D3 /* ShoppingSearchProductModel+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B96F23B2B33C36600A358D3 /* ShoppingSearchProductModel+Stub.swift */; };
+		9B96F23E2B33CD2200A358D3 /* ShoppingSearchViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B96F23D2B33CD2200A358D3 /* ShoppingSearchViewControllerTests.swift */; };
+		9B96F2402B33CE4700A358D3 /* ShoppingSearchPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B96F23F2B33CE4700A358D3 /* ShoppingSearchPresenterSpy.swift */; };
+		9B96F2422B33CF1A00A358D3 /* ShoppingSearchViewControllerDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B96F2412B33CF1A00A358D3 /* ShoppingSearchViewControllerDelegateSpy.swift */; };
+		9B96F2442B33CFD800A358D3 /* ShoppingSearchViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B96F2432B33CFD800A358D3 /* ShoppingSearchViewSpy.swift */; };
 		9BB96D422B31F3D600D193CD /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB96D412B31F3D600D193CD /* UIView+Extension.swift */; };
 		9BB96D452B31F58B00D193CD /* ShoppingSearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB96D442B31F58B00D193CD /* ShoppingSearchTextField.swift */; };
 		9BB96D472B31F93F00D193CD /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BB96D462B31F93F00D193CD /* Colors.xcassets */; };
@@ -77,6 +81,10 @@
 		9B96F2362B33BEF300A358D3 /* ShoppingSearchViewControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchViewControllerSpy.swift; sourceTree = "<group>"; };
 		9B96F2392B33C13300A358D3 /* ShoppingSearchModel+Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShoppingSearchModel+Stub.swift"; sourceTree = "<group>"; };
 		9B96F23B2B33C36600A358D3 /* ShoppingSearchProductModel+Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShoppingSearchProductModel+Stub.swift"; sourceTree = "<group>"; };
+		9B96F23D2B33CD2200A358D3 /* ShoppingSearchViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchViewControllerTests.swift; sourceTree = "<group>"; };
+		9B96F23F2B33CE4700A358D3 /* ShoppingSearchPresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchPresenterSpy.swift; sourceTree = "<group>"; };
+		9B96F2412B33CF1A00A358D3 /* ShoppingSearchViewControllerDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchViewControllerDelegateSpy.swift; sourceTree = "<group>"; };
+		9B96F2432B33CFD800A358D3 /* ShoppingSearchViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchViewSpy.swift; sourceTree = "<group>"; };
 		9BB96D412B31F3D600D193CD /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		9BB96D442B31F58B00D193CD /* ShoppingSearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchTextField.swift; sourceTree = "<group>"; };
 		9BB96D462B31F93F00D193CD /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -193,6 +201,7 @@
 				9B96F2272B33B01000A358D3 /* Doubles */,
 				9B96F22A2B33B03400A358D3 /* Views */,
 				9B96F22B2B33B0BE00A358D3 /* ShoppingSearchPresenterTests.swift */,
+				9B96F23D2B33CD2200A358D3 /* ShoppingSearchViewControllerTests.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -211,6 +220,9 @@
 			isa = PBXGroup;
 			children = (
 				9B96F2362B33BEF300A358D3 /* ShoppingSearchViewControllerSpy.swift */,
+				9B96F23F2B33CE4700A358D3 /* ShoppingSearchPresenterSpy.swift */,
+				9B96F2412B33CF1A00A358D3 /* ShoppingSearchViewControllerDelegateSpy.swift */,
+				9B96F2432B33CFD800A358D3 /* ShoppingSearchViewSpy.swift */,
 			);
 			path = Spies;
 			sourceTree = "<group>";
@@ -564,19 +576,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B96F23E2B33CD2200A358D3 /* ShoppingSearchViewControllerTests.swift in Sources */,
 				9B96F2332B33B1D800A358D3 /* NetworkServiceMock.swift in Sources */,
 				9B96F23A2B33C13300A358D3 /* ShoppingSearchModel+Stub.swift in Sources */,
 				9B96F22F2B33B10400A358D3 /* ShoppingSearchRepositoryTests.swift in Sources */,
 				9B6080A92B2E867A0074909E /* URLSessionMock.swift in Sources */,
+				9B96F2442B33CFD800A358D3 /* ShoppingSearchViewSpy.swift in Sources */,
 				9B3A727A2B3080F7008A7581 /* DataRequestMock.swift in Sources */,
 				9B6080A42B2E7AF00074909E /* HTTPMethodTests.swift in Sources */,
 				9B6080A62B2E86330074909E /* NetworkServiceTests.swift in Sources */,
 				9B96F23C2B33C36600A358D3 /* ShoppingSearchProductModel+Stub.swift in Sources */,
 				9BBF8CC12B2E1E6E000EB8C9 /* ErrorResponseTests.swift in Sources */,
+				9B96F2402B33CE4700A358D3 /* ShoppingSearchPresenterSpy.swift in Sources */,
 				9B6080AC2B2E880E0074909E /* URLSessionDataTaskMock.swift in Sources */,
 				9B96F2352B33BE0400A358D3 /* ShoppingSearchRepositoryMock.swift in Sources */,
 				9B96F2372B33BEF300A358D3 /* ShoppingSearchViewControllerSpy.swift in Sources */,
 				9B96F22C2B33B0BF00A358D3 /* ShoppingSearchPresenterTests.swift in Sources */,
+				9B96F2422B33CF1A00A358D3 /* ShoppingSearchViewControllerDelegateSpy.swift in Sources */,
 				9B3A727D2B31209A008A7581 /* ResponseDummy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
