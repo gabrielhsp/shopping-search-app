@@ -16,7 +16,7 @@ final class ShoppingSearchView: UIView {
     var didTapSearchButton: ((String?) -> Void)?
     
     // MARK: - UI Components
-    private let searchTextField: ShoppingSearchTextField = {
+    private(set) var searchTextField: ShoppingSearchTextField = {
         let textField = ShoppingSearchTextField()
         
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -24,7 +24,7 @@ final class ShoppingSearchView: UIView {
         return textField
     }()
     
-    private let searchFeedbackLabel: UILabel = {
+    private(set) var searchFeedbackLabel: UILabel = {
         let label = UILabel()
         
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -44,7 +44,7 @@ final class ShoppingSearchView: UIView {
         return view
     }()
     
-    private let searchButton: ShoppingSearchButton = {
+    private(set) var searchButton: ShoppingSearchButton = {
         let button = ShoppingSearchButton(type: .custom)
         
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -84,7 +84,7 @@ final class ShoppingSearchView: UIView {
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            searchTextField.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            searchTextField.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 16),
             searchTextField.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -16),
             searchTextField.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 16),
             searchTextField.heightAnchor.constraint(equalToConstant: 50),
@@ -103,7 +103,7 @@ final class ShoppingSearchView: UIView {
             searchButton.heightAnchor.constraint(equalToConstant: 50)
         ])
         
-        bottomConstraint = searchButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
+        bottomConstraint = searchButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -16)
         bottomConstraint?.isActive = true
     }
     
@@ -129,6 +129,7 @@ final class ShoppingSearchView: UIView {
     private func updateSearchTextFieldFeedback(_ textField: UITextField) {
         if let textFieldValue = textField.text, !textFieldValue.isEmpty {
             UIView.animate(withDuration: 0.3) { [weak self] in
+                self?.searchFeedbackLabel.text = nil
                 self?.searchFeedbackLabel.alpha = 0
             }
         }
