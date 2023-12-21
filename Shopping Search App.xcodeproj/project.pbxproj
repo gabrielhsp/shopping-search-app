@@ -153,9 +153,9 @@
 		9B3A727F2B312B24008A7581 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				9BB96D572B327F5600D193CD /* Models */,
 				9BB96D4E2B32792C00D193CD /* ShoppingSearchPresenter.swift */,
 				9B3A72802B312B3E008A7581 /* ShoppingSearchViewController.swift */,
+				9BB96D572B327F5600D193CD /* Models */,
 				9B3A72822B312B86008A7581 /* Protocols */,
 				9BB96D512B327DC000D193CD /* Repository */,
 				9BB96D432B31F57400D193CD /* Views */,

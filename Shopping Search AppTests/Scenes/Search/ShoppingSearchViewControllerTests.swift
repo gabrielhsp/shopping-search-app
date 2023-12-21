@@ -31,6 +31,12 @@ final class ShoppingSearchViewControllerTests: QuickSpec {
             sut.loadViewIfNeeded()
         }
         
+        describe("#init") {
+            it("should set controller property on presenter as the own controller") {
+                expect(presenterSpy.controller).to(beIdenticalTo(sut))
+            }
+        }
+        
         describe("#loadView") {
             it("should have a ShoppingSearchViewType as the current view") {
                 expect(sut.view).to(beAKindOf(ShoppingSearchViewType.self))
