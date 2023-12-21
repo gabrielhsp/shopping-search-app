@@ -20,6 +20,7 @@ final class ShoppingSearchProductsListViewController: UIViewController {
         self.contentView = contentView
         self.dispatchQueue = dispatchQueue
         super.init(nibName: nil, bundle: nil)
+        self.presenter.controller = self
     }
     
     required init?(coder: NSCoder) {

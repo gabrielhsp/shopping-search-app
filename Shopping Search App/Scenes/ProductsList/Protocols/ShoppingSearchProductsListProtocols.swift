@@ -12,6 +12,7 @@ protocol ShoppingSearchProductsListViewControllerType: AnyObject {
 }
 
 protocol ShoppingSearchProductsListPresenterType: AnyObject {
+    var controller: ShoppingSearchProductsListViewControllerType? { get set }
     func getProductsList()
 }
 
