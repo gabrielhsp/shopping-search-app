@@ -37,7 +37,6 @@ final class ShoppingSearchProductsListPresenter {
         return condition?.description
     }
     
-    // TODO: - Consider here products with and without extra taxes
     private func getProductInstallments(for installments: ShoppingSearchProductModel.Installments?) -> NSAttributedString? {
         guard let installments = installments,
               let installmentPriceFormatted = formatPrice(from: installments.amount) else { return nil }
