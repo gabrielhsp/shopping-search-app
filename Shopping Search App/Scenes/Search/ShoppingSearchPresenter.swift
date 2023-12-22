@@ -30,7 +30,7 @@ final class ShoppingSearchPresenter {
     
     private func handleRequestSearchSuccess(response: ShoppingSearchModel) {
         guard !response.results.isEmpty else {
-            controller?.didReceiveSearchError(withMessage: "Sua busca não retornou nenhum resultado. Por favor, tente novamente.")
+            controller?.didReceiveSearchError(withMessage: LocalizedStrings.searchErrorEmptyResult)
             return
         }
         
@@ -38,7 +38,7 @@ final class ShoppingSearchPresenter {
     }
     
     private func handleRequestSearchError(error: Error) {
-        controller?.didReceiveSearchError(withMessage: "Houve um erro ao realizar sua busca. Por favor, tente novamente.")
+        controller?.didReceiveSearchError(withMessage: LocalizedStrings.searchErrorGeneral)
     }
 }
 
@@ -46,7 +46,7 @@ final class ShoppingSearchPresenter {
 extension ShoppingSearchPresenter: ShoppingSearchPresenterType {
     func didRequestSearch(withSearchText searchText: String?) {
         guard let searchTerm = searchText, !searchTerm.isEmpty else {
-            controller?.didReceiveSearchError(withMessage: "Digite um termo de busca válido")
+            controller?.didReceiveSearchError(withMessage: LocalizedStrings.searchErrorValidTerm)
             return
         }
         

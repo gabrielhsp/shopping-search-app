@@ -49,7 +49,7 @@ final class ShoppingSearchTextField: UITextField {
         backgroundColor = .appColor(.textFieldBackground)
         textColor = .appColor(.textFieldValue)
         setCornerRadius(radius: 16)
-        attributedPlaceholder = NSAttributedString(string: "O que você está procurando?", attributes: [
+        attributedPlaceholder = NSAttributedString(string: LocalizedStrings.searchTextFieldPlaceholder, attributes: [
             .foregroundColor: UIColor.appColor(.textFieldPlaceholder)
         ])
     }
