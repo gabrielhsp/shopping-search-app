@@ -5,7 +5,7 @@
 //  Created by Gabriel Pereira on 21/12/23.
 //
 
-import Foundation
+import UIKit
 
 final class ShoppingSearchProductsListPresenter {
     // MARK: - Properties
@@ -31,8 +31,29 @@ final class ShoppingSearchProductsListPresenter {
         return numberFormatter.string(from: NSNumber(value: price))
     }
     
-    private func getProductCondition(condition: String) -> ShoppingSearchProductListItem.Condition {
-        return ShoppingSearchProductListItem.Condition(rawValue: condition) ?? .new
+    private func getProductCondition(condition: String) -> String? {
+        let condition = ShoppingSearchProductListItem.Condition(rawValue: condition)
+        
+        return condition?.description
+    }
+    
+    private func getProductInstallments(for installments: ShoppingSearchProductModel.Installments?) -> NSAttributedString? {
+        guard let installments = installments,
+              let installmentPriceFormatted = formatPrice(from: installments.amount) else { return nil }
+        
+        let installmentBaseString = "até \(installments.quantity)x \(installmentPriceFormatted)"
+        
+        let installmentsStartAttributedString = NSMutableAttributedString(string: "em ", attributes: [
+            .foregroundColor: UIColor.appColor(.subtitle)
+        ])
+        
+        let installmentsBaseAttributedString = NSAttributedString(string: installmentBaseString, attributes: [
+            .foregroundColor: UIColor.appColor(.promotion)
+        ])
+        
+        installmentsStartAttributedString.append(installmentsBaseAttributedString)
+        
+        return installmentsStartAttributedString
     }
     
     private func createSearchProductListItem(product: ShoppingSearchProductModel) -> ShoppingSearchProductListItem {
@@ -41,7 +62,7 @@ final class ShoppingSearchProductsListPresenter {
                                       name: product.title,
                                       originalPrice: formatPrice(from: product.price),
                                       promotionalPrice: formatPrice(from: product.salePrice),
-                                      installments: formatPrice(from: product.installments?.amount),
+                                      installments: getProductInstallments(for: product.installments),
                                       isFreeDelivered: true,
                                       condition: getProductCondition(condition: product.condition))
     }

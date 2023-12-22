@@ -13,9 +13,9 @@ struct ShoppingSearchProductListItem: Equatable {
     let name: String
     let originalPrice: String?
     let promotionalPrice: String?
-    let installments: String?
+    let installments: NSAttributedString?
     let isFreeDelivered: Bool
-    let condition: Condition
+    let condition: String?
     
     enum Condition: String, Equatable {
         case new

@@ -71,7 +71,7 @@ final class ShoppingSearchProductsListCell: UITableViewCell {
     private let productPriceLabel: UILabel = {
         let label = UILabel()
         
-        label.font = .systemFont(ofSize: 14, weight: .semibold)
+        label.font = .systemFont(ofSize: 16, weight: .semibold)
         label.textColor = .appColor(.title)
         
         return label
@@ -153,7 +153,8 @@ extension ShoppingSearchProductsListCell {
         productFreeShippingLabel.isHidden = !item.isFreeDelivered
         productTitleLabel.text = item.name
         productPriceLabel.text = item.promotionalPrice ?? item.originalPrice
-        productPriceInstallmentsLabel.text = item.installments
-        productConditionLabel.text = item.condition.description
+        productPriceInstallmentsLabel.attributedText = item.installments
+        productConditionLabel.isHidden = !(item.condition != nil)
+        productConditionLabel.text = item.condition
     }
 }
