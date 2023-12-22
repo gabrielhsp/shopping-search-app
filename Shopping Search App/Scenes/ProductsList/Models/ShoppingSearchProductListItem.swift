@@ -13,11 +13,21 @@ struct ShoppingSearchProductListItem: Equatable {
     let name: String
     let originalPrice: String?
     let promotionalPrice: String?
+    let installments: String?
     let isFreeDelivered: Bool
     let condition: Condition
     
     enum Condition: String, Equatable {
         case new
         case used
+        
+        var description: String {
+            switch self {
+            case .new:
+                return "Produto novo"
+            case .used:
+                return "Produto usado"
+            }
+        }
     }
 }
