@@ -9,7 +9,7 @@ import UIKit
 
 final class ShoppingSearchProductsListView: UIView {
     // MARK: - Properties
-    private var dataSource: ShoppingSearchProductsListDataSource = ShoppingSearchProductsListDataSource()
+    private(set) var dataSource: ShoppingSearchProductsListDataSource = ShoppingSearchProductsListDataSource()
     
     // MARK: - UI Components
     private let tableView: UITableView = {
