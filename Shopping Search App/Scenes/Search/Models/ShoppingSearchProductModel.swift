@@ -16,4 +16,12 @@ struct ShoppingSearchProductModel: Decodable, Equatable {
     let originalPrice: Double?
     let salePrice: Double?
     let availableQuantity: Int
+    let installments: Installments?
+    
+    struct Installments: Decodable, Equatable {
+        let quantity: Int
+        let amount: Double
+        let rate: Double
+        let currencyId: String
+    }
 }
