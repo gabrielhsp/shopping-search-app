@@ -9,7 +9,7 @@ import Foundation
 
 struct ShoppingSearchProductListItem: Equatable {
     let id: String
-    let image: String
+    let image: URL?
     let name: String
     let originalPrice: String?
     let promotionalPrice: String?

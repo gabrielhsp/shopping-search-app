@@ -56,9 +56,13 @@ final class ShoppingSearchProductsListPresenter {
         return installmentsStartAttributedString
     }
     
+    private func getProductThumbnailURL(imageURL: String) -> URL? {
+        return URL(string: imageURL)
+    }
+    
     private func createSearchProductListItem(product: ShoppingSearchProductModel) -> ShoppingSearchProductListItem {
         ShoppingSearchProductListItem(id: product.id,
-                                      image: product.thumbnail,
+                                      image: getProductThumbnailURL(imageURL: product.thumbnail),
                                       name: product.title,
                                       originalPrice: formatPrice(from: product.price),
                                       promotionalPrice: formatPrice(from: product.salePrice),

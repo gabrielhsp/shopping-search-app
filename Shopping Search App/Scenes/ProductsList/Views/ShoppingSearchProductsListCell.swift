@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 final class ShoppingSearchProductsListCell: UITableViewCell {
     // MARK: - UI Components
@@ -13,8 +14,8 @@ final class ShoppingSearchProductsListCell: UITableViewCell {
         let imageView = UIImageView()
         
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.kf.indicatorType = .activity
         imageView.contentMode = .scaleAspectFit
-        imageView.backgroundColor = .red
         imageView.setCornerRadius(radius: 16)
         
         return imageView
@@ -146,10 +147,17 @@ final class ShoppingSearchProductsListCell: UITableViewCell {
         backgroundColor = .appColor(.background)
         selectionStyle = .none
     }
+    
+    private func setProductImage(imageURL: URL?) {
+        guard let imageURL = imageURL else { return }
+        
+        productImageView.kf.setImage(with: imageURL)
+    }
 }
 
 extension ShoppingSearchProductsListCell {
     func setItem(item: ShoppingSearchProductListItem) {
+        setProductImage(imageURL: item.image)
         productFreeShippingLabel.isHidden = !item.isFreeDelivered
         productTitleLabel.text = item.name
         productPriceLabel.text = item.promotionalPrice ?? item.originalPrice
