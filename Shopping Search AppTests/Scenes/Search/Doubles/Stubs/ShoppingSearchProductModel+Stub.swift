@@ -16,7 +16,8 @@ extension ShoppingSearchProductModel {
                      price: Double = 7200.10,
                      originalPrice: Double? = 7200.10,
                      salePrice: Double? = 6200.10,
-                     availableQuantity: Int = 100) -> Self {
+                     availableQuantity: Int = 100,
+                     installments: Installments = .stub()) -> Self {
         ShoppingSearchProductModel(id: id,
                                    title: title,
                                    condition: condition,
@@ -24,6 +25,16 @@ extension ShoppingSearchProductModel {
                                    price: price,
                                    originalPrice: originalPrice,
                                    salePrice: salePrice,
-                                   availableQuantity: availableQuantity)
+                                   availableQuantity: availableQuantity, 
+                                   installments: installments)
+    }
+}
+
+extension ShoppingSearchProductModel.Installments {
+    static func stub() -> Self {
+        ShoppingSearchProductModel.Installments(quantity: 10,
+                                                amount: 720.10,
+                                                rate: 0,
+                                                currencyId: "BRL")
     }
 }
