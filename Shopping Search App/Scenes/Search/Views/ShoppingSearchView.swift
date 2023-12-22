@@ -31,7 +31,7 @@ final class ShoppingSearchView: UIView {
         label.alpha = 0
         label.numberOfLines = 0
         label.textColor = .systemRed
-        label.font = .systemFont(ofSize: 14, weight: .regular)
+        label.font = Fonts.small.applyFont(weight: .regular)
         
         return label
     }()

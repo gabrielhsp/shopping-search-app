@@ -59,7 +59,7 @@ final class ShoppingSearchButton: UIButton {
         setTitle(LocalizedStrings.searchButtonTitle, for: .normal)
         setTitleColor(.white, for: .normal)
         setCornerRadius(radius: 16)
-        titleLabel?.font = .boldSystemFont(ofSize: 18)
+        titleLabel?.font = Fonts.large.applyFont(weight: .bold)
     }
     
     private func setupLoading() {

@@ -43,7 +43,7 @@ final class ShoppingSearchProductsListCell: UITableViewCell {
     private let productFreeShippingLabel: UILabel = {
         let label = UILabel()
         
-        label.font = .systemFont(ofSize: 12)
+        label.font = Fonts.extraSmall.applyFont(weight: .regular)
         label.text = LocalizedStrings.freeShipping
         label.textColor = .appColor(.promotion)
         
@@ -53,7 +53,7 @@ final class ShoppingSearchProductsListCell: UITableViewCell {
     private let productTitleLabel: UILabel = {
         let label = UILabel()
         
-        label.font = .systemFont(ofSize: 18, weight: .medium)
+        label.font = Fonts.large.applyFont(weight: .medium)
         label.numberOfLines = 3
         label.textColor = .appColor(.subtitle)
         
@@ -72,7 +72,7 @@ final class ShoppingSearchProductsListCell: UITableViewCell {
     private let productPriceLabel: UILabel = {
         let label = UILabel()
         
-        label.font = .systemFont(ofSize: 16, weight: .semibold)
+        label.font = Fonts.medium.applyFont(weight: .semibold)
         label.textColor = .appColor(.title)
         
         return label
@@ -81,7 +81,7 @@ final class ShoppingSearchProductsListCell: UITableViewCell {
     private let productPriceInstallmentsLabel: UILabel = {
         let label = UILabel()
         
-        label.font = .systemFont(ofSize: 14, weight: .regular)
+        label.font = Fonts.small.applyFont(weight: .regular)
         label.textColor = .appColor(.title)
         
         return label
@@ -90,7 +90,7 @@ final class ShoppingSearchProductsListCell: UITableViewCell {
     private let productConditionLabel: UILabel = {
         let label = UILabel()
         
-        label.font = .systemFont(ofSize: 12, weight: .semibold)
+        label.font = Fonts.extraSmall.applyFont(weight: .semibold)
         label.textColor = .appColor(.action)
         
         return label
