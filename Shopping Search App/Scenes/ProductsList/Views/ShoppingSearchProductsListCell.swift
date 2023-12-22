@@ -44,7 +44,7 @@ final class ShoppingSearchProductsListCell: UITableViewCell {
         let label = UILabel()
         
         label.font = .systemFont(ofSize: 12)
-        label.text = "Frete Grátis"
+        label.text = LocalizedStrings.freeShipping
         label.textColor = .appColor(.promotion)
         
         return label

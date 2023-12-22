@@ -14,4 +14,10 @@ struct LocalizedStrings: Equatable {
     static let searchErrorEmptyResult = "Sua busca não retornou nenhum resultado. Por favor, tente novamente."
     static let searchTextFieldPlaceholder = "O que você está procurando?"
     static let searchButtonTitle = "Buscar"
+    
+    static let searchResultsTitle = "Resultados da busca"
+    static let freeTaxes = "sem juros"
+    static let freeShipping = "Frete Grátis"
+    static let productConditionNew = "Produto novo"
+    static let productConditionUsed = "Produto usado"
 }

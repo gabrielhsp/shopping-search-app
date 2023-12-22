@@ -24,9 +24,9 @@ struct ShoppingSearchProductListItem: Equatable {
         var description: String {
             switch self {
             case .new:
-                return "Produto novo"
+                return  LocalizedStrings.productConditionNew
             case .used:
-                return "Produto usado"
+                return  LocalizedStrings.productConditionUsed
             }
         }
     }

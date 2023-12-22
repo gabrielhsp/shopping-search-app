@@ -44,7 +44,7 @@ final class ShoppingSearchProductsListPresenter {
         
         var installmentBaseString = "até \(installments.quantity)x \(installmentPriceFormatted)"
         let installmentsContainsTaxes = installments.rate > 0 && installments.quantity > 10
-        let installmentFreeTaxString = "sem juros"
+        let installmentFreeTaxString = LocalizedStrings.freeTaxes
         let installmentsBaseColor: UIColor? = installmentsContainsTaxes ? .appColor(.subtitle) : .appColor(.promotion)
         
         if !installmentsContainsTaxes {
