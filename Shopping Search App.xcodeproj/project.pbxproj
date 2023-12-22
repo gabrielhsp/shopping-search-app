@@ -65,6 +65,9 @@
 		9BFF70EC2B34DFD600F2D856 /* CoordinatorNavigationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFF70EB2B34DFD600F2D856 /* CoordinatorNavigationType.swift */; };
 		9BFF70EF2B35349300F2D856 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 9BFF70EE2B35349300F2D856 /* Kingfisher */; };
 		9BFF70F12B3539A500F2D856 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFF70F02B3539A500F2D856 /* Assets.swift */; };
+		9BFF70F62B353E9200F2D856 /* ShoppingSearchProductsListViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFF70F52B353E9200F2D856 /* ShoppingSearchProductsListViewControllerSpy.swift */; };
+		9BFF70F82B353EDC00F2D856 /* ShoppingSearchProductsListPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFF70F72B353EDC00F2D856 /* ShoppingSearchProductsListPresenterSpy.swift */; };
+		9BFF70FA2B353F3900F2D856 /* ShoppingSearchProductsListViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFF70F92B353F3900F2D856 /* ShoppingSearchProductsListViewSpy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +140,9 @@
 		9BFF70E82B34DF7D00F2D856 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		9BFF70EB2B34DFD600F2D856 /* CoordinatorNavigationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorNavigationType.swift; sourceTree = "<group>"; };
 		9BFF70F02B3539A500F2D856 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		9BFF70F52B353E9200F2D856 /* ShoppingSearchProductsListViewControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchProductsListViewControllerSpy.swift; sourceTree = "<group>"; };
+		9BFF70F72B353EDC00F2D856 /* ShoppingSearchProductsListPresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchProductsListPresenterSpy.swift; sourceTree = "<group>"; };
+		9BFF70F92B353F3900F2D856 /* ShoppingSearchProductsListViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchProductsListViewSpy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +227,7 @@
 		9B96F2252B33B00100A358D3 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				9BFF70F22B353E6400F2D856 /* ProductsList */,
 				9B96F2262B33B00800A358D3 /* Search */,
 			);
 			path = Scenes;
@@ -411,10 +418,10 @@
 		9BBF8C952B2E0B6E000EB8C9 /* Shopping Search AppTests */ = {
 			isa = PBXGroup;
 			children = (
-				9B96F2302B33B1C300A358D3 /* TestHelpers */,
 				9B6080AD2B2E8EDE0074909E /* Shopping Search App.xctestplan */,
 				9BBF8CBE2B2E1E49000EB8C9 /* Network */,
 				9B96F2252B33B00100A358D3 /* Scenes */,
+				9B96F2302B33B1C300A358D3 /* TestHelpers */,
 			);
 			path = "Shopping Search AppTests";
 			sourceTree = "<group>";
@@ -527,6 +534,32 @@
 				9BFF70EB2B34DFD600F2D856 /* CoordinatorNavigationType.swift */,
 			);
 			path = Enumerators;
+			sourceTree = "<group>";
+		};
+		9BFF70F22B353E6400F2D856 /* ProductsList */ = {
+			isa = PBXGroup;
+			children = (
+				9BFF70F32B353E6B00F2D856 /* Doubles */,
+			);
+			path = ProductsList;
+			sourceTree = "<group>";
+		};
+		9BFF70F32B353E6B00F2D856 /* Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				9BFF70F42B353E7200F2D856 /* Spies */,
+			);
+			path = Doubles;
+			sourceTree = "<group>";
+		};
+		9BFF70F42B353E7200F2D856 /* Spies */ = {
+			isa = PBXGroup;
+			children = (
+				9BFF70F52B353E9200F2D856 /* ShoppingSearchProductsListViewControllerSpy.swift */,
+				9BFF70F72B353EDC00F2D856 /* ShoppingSearchProductsListPresenterSpy.swift */,
+				9BFF70F92B353F3900F2D856 /* ShoppingSearchProductsListViewSpy.swift */,
+			);
+			path = Spies;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -696,10 +729,13 @@
 				9BBF8CC12B2E1E6E000EB8C9 /* ErrorResponseTests.swift in Sources */,
 				9B96F2492B33D58100A358D3 /* DispatchQueueSpy.swift in Sources */,
 				9B96F2402B33CE4700A358D3 /* ShoppingSearchPresenterSpy.swift in Sources */,
+				9BFF70F62B353E9200F2D856 /* ShoppingSearchProductsListViewControllerSpy.swift in Sources */,
 				9B6080AC2B2E880E0074909E /* URLSessionDataTaskMock.swift in Sources */,
 				9B96F2352B33BE0400A358D3 /* ShoppingSearchRepositoryMock.swift in Sources */,
 				9B96F2372B33BEF300A358D3 /* ShoppingSearchViewControllerSpy.swift in Sources */,
+				9BFF70FA2B353F3900F2D856 /* ShoppingSearchProductsListViewSpy.swift in Sources */,
 				9B96F22C2B33B0BF00A358D3 /* ShoppingSearchPresenterTests.swift in Sources */,
+				9BFF70F82B353EDC00F2D856 /* ShoppingSearchProductsListPresenterSpy.swift in Sources */,
 				9B96F2422B33CF1A00A358D3 /* ShoppingSearchViewControllerDelegateSpy.swift in Sources */,
 				9B3A727D2B31209A008A7581 /* ResponseDummy.swift in Sources */,
 			);
