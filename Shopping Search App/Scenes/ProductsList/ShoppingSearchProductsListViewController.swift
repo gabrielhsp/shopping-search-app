@@ -34,7 +34,16 @@ final class ShoppingSearchProductsListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavigationBar()
         presenter.getProductsList()
+    }
+    
+    // MARK: - Private Methods
+    private func setupNavigationBar() {
+        title = "Resultados da busca"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.tintColor = .appColor(.title)
+        navigationController?.navigationItem.backButtonDisplayMode = .minimal
     }
 }
 
