@@ -23,6 +23,7 @@ final class ShoppingSearchProductsListPresenter {
         
         let numberFormatter = NumberFormatter()
         
+        numberFormatter.locale = Locale(identifier: "pt_BR")
         numberFormatter.numberStyle = .currency
         numberFormatter.minimumFractionDigits = 2
         numberFormatter.maximumFractionDigits = 2
