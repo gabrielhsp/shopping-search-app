@@ -37,6 +37,7 @@ final class ShoppingSearchProductsListPresenter {
         return condition?.description
     }
     
+    // TODO: - Consider here products with and without extra taxes
     private func getProductInstallments(for installments: ShoppingSearchProductModel.Installments?) -> NSAttributedString? {
         guard let installments = installments,
               let installmentPriceFormatted = formatPrice(from: installments.amount) else { return nil }
@@ -60,6 +61,7 @@ final class ShoppingSearchProductsListPresenter {
         return URL(string: imageURL)
     }
     
+    // TODO: - Remove the isFreeDelivered mock data and use what's the API brings us back
     private func createSearchProductListItem(product: ShoppingSearchProductModel) -> ShoppingSearchProductListItem {
         ShoppingSearchProductListItem(id: product.id,
                                       image: getProductThumbnailURL(imageURL: product.thumbnail),
