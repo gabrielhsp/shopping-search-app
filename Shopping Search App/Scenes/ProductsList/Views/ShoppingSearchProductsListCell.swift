@@ -130,9 +130,9 @@ final class ShoppingSearchProductsListCell: UITableViewCell {
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            productImageView.heightAnchor.constraint(equalToConstant: 120),
-            productImageView.widthAnchor.constraint(equalToConstant: 120),
-            productImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
+            productImageView.heightAnchor.constraint(equalToConstant: 90),
+            productImageView.widthAnchor.constraint(equalToConstant: 90),
+            productImageView.centerYAnchor.constraint(equalTo: contentStackView.centerYAnchor),
             productImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
             
             contentStackView.heightAnchor.constraint(greaterThanOrEqualToConstant: 120),
