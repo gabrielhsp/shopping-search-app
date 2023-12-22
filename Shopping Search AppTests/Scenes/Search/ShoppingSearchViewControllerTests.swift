@@ -47,6 +47,24 @@ final class ShoppingSearchViewControllerTests: QuickSpec {
             it("should set a title for the view controller") {
                 expect(sut.title).to(equal("Busca"))
             }
+            
+            context("when controller is hoisted on a navigation controller") {
+                var navigationController: UINavigationController!
+                
+                beforeEach {
+                    navigationController = UINavigationController(rootViewController: sut)
+                    
+                    sut.viewDidLoad()
+                }
+                
+                it("should set custom configurations for items on navigation controller") {
+                    let assertObject = navigationController.navigationBar
+                    
+                    expect(assertObject.prefersLargeTitles).to(beTrue())
+                    expect(assertObject.tintColor).to(equal(.appColor(.title)))
+                    expect(navigationController.navigationItem.backButtonDisplayMode).to(equal(.minimal))
+                }
+            }
         }
         
         describe("#bindLayoutEvents") {
