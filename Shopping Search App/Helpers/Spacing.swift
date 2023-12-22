@@ -19,4 +19,7 @@ enum Spacing: CGFloat, Equatable {
     
     /// Returns 16
     case medium = 16
+    
+    /// Returns 32
+    case extraExtraLarge = 32
 }

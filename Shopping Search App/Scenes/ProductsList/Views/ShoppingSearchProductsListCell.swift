@@ -26,7 +26,7 @@ final class ShoppingSearchProductsListCell: UITableViewCell {
         
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
-        stackView.spacing = 8
+        stackView.spacing = Spacing.extraSmall.rawValue
         
         return stackView
     }()
@@ -35,7 +35,7 @@ final class ShoppingSearchProductsListCell: UITableViewCell {
         let stackView = UIStackView()
         
         stackView.axis = .vertical
-        stackView.spacing = 4
+        stackView.spacing = Spacing.extraExtraSmall.rawValue
         
         return stackView
     }()
@@ -133,13 +133,13 @@ final class ShoppingSearchProductsListCell: UITableViewCell {
             productImageView.heightAnchor.constraint(equalToConstant: 90),
             productImageView.widthAnchor.constraint(equalToConstant: 90),
             productImageView.centerYAnchor.constraint(equalTo: contentStackView.centerYAnchor),
-            productImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+            productImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: Spacing.medium.rawValue),
             
             contentStackView.heightAnchor.constraint(greaterThanOrEqualToConstant: 120),
-            contentStackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
-            contentStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -12),
-            contentStackView.leadingAnchor.constraint(equalTo: productImageView.trailingAnchor, constant: 12),
-            contentStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -16)
+            contentStackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: Spacing.medium.rawValue),
+            contentStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -Spacing.small.rawValue),
+            contentStackView.leadingAnchor.constraint(equalTo: productImageView.trailingAnchor, constant: Spacing.small.rawValue),
+            contentStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -Spacing.medium.rawValue)
         ])
     }
     

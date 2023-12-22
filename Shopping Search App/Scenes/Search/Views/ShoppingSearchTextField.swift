@@ -9,7 +9,10 @@ import UIKit
 
 final class ShoppingSearchTextField: UITextField {
     // MARK: - Properties
-    private let padding = UIEdgeInsets(top: 8, left: 16, bottom: 8, right: 32)
+    private let padding = UIEdgeInsets(top: Spacing.extraSmall.rawValue,
+                                       left: Spacing.medium.rawValue,
+                                       bottom: Spacing.extraSmall.rawValue,
+                                       right: Spacing.extraExtraLarge.rawValue)
     
     // MARK: - Initializer Methods
     override init(frame: CGRect) {
