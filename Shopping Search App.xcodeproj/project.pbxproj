@@ -68,6 +68,8 @@
 		9BFF70F62B353E9200F2D856 /* ShoppingSearchProductsListViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFF70F52B353E9200F2D856 /* ShoppingSearchProductsListViewControllerSpy.swift */; };
 		9BFF70F82B353EDC00F2D856 /* ShoppingSearchProductsListPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFF70F72B353EDC00F2D856 /* ShoppingSearchProductsListPresenterSpy.swift */; };
 		9BFF70FA2B353F3900F2D856 /* ShoppingSearchProductsListViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFF70F92B353F3900F2D856 /* ShoppingSearchProductsListViewSpy.swift */; };
+		9BFF70FC2B353FAB00F2D856 /* ShoppingSearchProductsListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFF70FB2B353FAB00F2D856 /* ShoppingSearchProductsListViewControllerTests.swift */; };
+		9BFF70FF2B35419400F2D856 /* ShoppingSearchProductListItem+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFF70FE2B35419400F2D856 /* ShoppingSearchProductListItem+Stub.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +145,8 @@
 		9BFF70F52B353E9200F2D856 /* ShoppingSearchProductsListViewControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchProductsListViewControllerSpy.swift; sourceTree = "<group>"; };
 		9BFF70F72B353EDC00F2D856 /* ShoppingSearchProductsListPresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchProductsListPresenterSpy.swift; sourceTree = "<group>"; };
 		9BFF70F92B353F3900F2D856 /* ShoppingSearchProductsListViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchProductsListViewSpy.swift; sourceTree = "<group>"; };
+		9BFF70FB2B353FAB00F2D856 /* ShoppingSearchProductsListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchProductsListViewControllerTests.swift; sourceTree = "<group>"; };
+		9BFF70FE2B35419400F2D856 /* ShoppingSearchProductListItem+Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShoppingSearchProductListItem+Stub.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -540,6 +544,7 @@
 			isa = PBXGroup;
 			children = (
 				9BFF70F32B353E6B00F2D856 /* Doubles */,
+				9BFF70FB2B353FAB00F2D856 /* ShoppingSearchProductsListViewControllerTests.swift */,
 			);
 			path = ProductsList;
 			sourceTree = "<group>";
@@ -547,6 +552,7 @@
 		9BFF70F32B353E6B00F2D856 /* Doubles */ = {
 			isa = PBXGroup;
 			children = (
+				9BFF70FD2B35414100F2D856 /* Stubs */,
 				9BFF70F42B353E7200F2D856 /* Spies */,
 			);
 			path = Doubles;
@@ -560,6 +566,14 @@
 				9BFF70F92B353F3900F2D856 /* ShoppingSearchProductsListViewSpy.swift */,
 			);
 			path = Spies;
+			sourceTree = "<group>";
+		};
+		9BFF70FD2B35414100F2D856 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				9BFF70FE2B35419400F2D856 /* ShoppingSearchProductListItem+Stub.swift */,
+			);
+			path = Stubs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -722,6 +736,7 @@
 				9B6080A92B2E867A0074909E /* URLSessionMock.swift in Sources */,
 				9B96F2442B33CFD800A358D3 /* ShoppingSearchViewSpy.swift in Sources */,
 				9B3A727A2B3080F7008A7581 /* DataRequestMock.swift in Sources */,
+				9BFF70FF2B35419400F2D856 /* ShoppingSearchProductListItem+Stub.swift in Sources */,
 				9B6080A42B2E7AF00074909E /* HTTPMethodTests.swift in Sources */,
 				9B6080A62B2E86330074909E /* NetworkServiceTests.swift in Sources */,
 				9BFF70CE2B3484E100F2D856 /* ShoppingSearchDataRequestTests.swift in Sources */,
@@ -729,6 +744,7 @@
 				9BBF8CC12B2E1E6E000EB8C9 /* ErrorResponseTests.swift in Sources */,
 				9B96F2492B33D58100A358D3 /* DispatchQueueSpy.swift in Sources */,
 				9B96F2402B33CE4700A358D3 /* ShoppingSearchPresenterSpy.swift in Sources */,
+				9BFF70FC2B353FAB00F2D856 /* ShoppingSearchProductsListViewControllerTests.swift in Sources */,
 				9BFF70F62B353E9200F2D856 /* ShoppingSearchProductsListViewControllerSpy.swift in Sources */,
 				9B6080AC2B2E880E0074909E /* URLSessionDataTaskMock.swift in Sources */,
 				9B96F2352B33BE0400A358D3 /* ShoppingSearchRepositoryMock.swift in Sources */,
