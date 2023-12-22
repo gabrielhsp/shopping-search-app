@@ -53,10 +53,6 @@ final class NetworkServiceTests: QuickSpec {
                 }
             }
             
-            context("when service url is valid, but url created by URL Components is not valid") {
-                // TODO: - Find a way to write a test for this scenario
-            }
-            
             context("when service url is valid and url contains query items and custom headers") {
                 beforeEach {
                     requestMock = DataRequestMock(url: "https://api.mercadolibre.com/sites/MLB/search",
