@@ -10,6 +10,8 @@ import UIKit
 enum Colors: String {
     case action
     case background
+    case promotion
+    case subtitle
     case text
     case textFieldBackground
     case textFieldPlaceholder
