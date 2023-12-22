@@ -66,6 +66,7 @@
 		9BFF70E92B34DF7D00F2D856 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFF70E82B34DF7D00F2D856 /* CoordinatorProtocol.swift */; };
 		9BFF70EC2B34DFD600F2D856 /* CoordinatorNavigationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFF70EB2B34DFD600F2D856 /* CoordinatorNavigationType.swift */; };
 		9BFF70EF2B35349300F2D856 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 9BFF70EE2B35349300F2D856 /* Kingfisher */; };
+		9BFF70F12B3539A500F2D856 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFF70F02B3539A500F2D856 /* Assets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +140,7 @@
 		9BFF70E62B34DF6700F2D856 /* ShoppingSearchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchCoordinator.swift; sourceTree = "<group>"; };
 		9BFF70E82B34DF7D00F2D856 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		9BFF70EB2B34DFD600F2D856 /* CoordinatorNavigationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorNavigationType.swift; sourceTree = "<group>"; };
+		9BFF70F02B3539A500F2D856 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -327,6 +329,7 @@
 				9BB96D4B2B3247AB00D193CD /* Protocols */,
 				9BB96D402B31F3C400D193CD /* Extensions */,
 				9BB96D492B31FA1400D193CD /* Colors.swift */,
+				9BFF70F02B3539A500F2D856 /* Assets.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -685,6 +688,7 @@
 				9BB96D592B327F5E00D193CD /* ShoppingSearchModel.swift in Sources */,
 				9BFF70E12B34AD4700F2D856 /* ShoppingSearchProductModel.swift in Sources */,
 				9BBF8CBD2B2E126A000EB8C9 /* NetworkService.swift in Sources */,
+				9BFF70F12B3539A500F2D856 /* Assets.swift in Sources */,
 				9BBF8CBB2B2E11B2000EB8C9 /* URLSessionProtocol.swift in Sources */,
 				9BBF8CB72B2E1179000EB8C9 /* ErrorResponse.swift in Sources */,
 				9BBF8CB52B2E1160000EB8C9 /* HTTPMethod.swift in Sources */,
