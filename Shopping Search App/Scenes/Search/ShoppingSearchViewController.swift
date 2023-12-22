@@ -38,10 +38,17 @@ final class ShoppingSearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Busca"
+        setupNavigationBar()
     }
     
     // MARK: - Private Methods
+    private func setupNavigationBar() {
+        title = "Busca"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.tintColor = .appColor(.title)
+        navigationController?.navigationItem.backButtonDisplayMode = .minimal
+    }
+    
     private func bindLayoutEvents() {
         contentView.didTapSearchButton = { [weak self] searchText in
             self?.presenter.didRequestSearch(withSearchText: searchText)
