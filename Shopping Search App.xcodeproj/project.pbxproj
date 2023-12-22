@@ -20,6 +20,9 @@
 		9B6080AC2B2E880E0074909E /* URLSessionDataTaskMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B6080AB2B2E880E0074909E /* URLSessionDataTaskMock.swift */; };
 		9B84FCD82B35E82000FC057E /* ShoppingSearchProductsListCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B84FCD72B35E82000FC057E /* ShoppingSearchProductsListCellTests.swift */; };
 		9B84FCDA2B35ECEB00FC057E /* ShoppingSearchProductsListViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B84FCD92B35ECEB00FC057E /* ShoppingSearchProductsListViewTests.swift */; };
+		9B84FCDC2B35F07200FC057E /* ShoppingSearchCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B84FCDB2B35F07200FC057E /* ShoppingSearchCoordinatorTests.swift */; };
+		9B84FCE02B360B7600FC057E /* UINavigationControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B84FCDF2B360B7600FC057E /* UINavigationControllerSpy.swift */; };
+		9B84FCE32B360D9000FC057E /* NetworkServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B84FCE22B360D9000FC057E /* NetworkServiceMock.swift */; };
 		9B96F2242B33702300A358D3 /* ShoppingSearchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B96F2232B33702300A358D3 /* ShoppingSearchButton.swift */; };
 		9B96F22C2B33B0BF00A358D3 /* ShoppingSearchPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B96F22B2B33B0BE00A358D3 /* ShoppingSearchPresenterTests.swift */; };
 		9B96F2352B33BE0400A358D3 /* ShoppingSearchRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B96F2342B33BE0400A358D3 /* ShoppingSearchRepositoryMock.swift */; };
@@ -101,6 +104,9 @@
 		9B6080AD2B2E8EDE0074909E /* Shopping Search App.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Shopping Search App.xctestplan"; sourceTree = "<group>"; };
 		9B84FCD72B35E82000FC057E /* ShoppingSearchProductsListCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchProductsListCellTests.swift; sourceTree = "<group>"; };
 		9B84FCD92B35ECEB00FC057E /* ShoppingSearchProductsListViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchProductsListViewTests.swift; sourceTree = "<group>"; };
+		9B84FCDB2B35F07200FC057E /* ShoppingSearchCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchCoordinatorTests.swift; sourceTree = "<group>"; };
+		9B84FCDF2B360B7600FC057E /* UINavigationControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerSpy.swift; sourceTree = "<group>"; };
+		9B84FCE22B360D9000FC057E /* NetworkServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceMock.swift; sourceTree = "<group>"; };
 		9B96F2232B33702300A358D3 /* ShoppingSearchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchButton.swift; sourceTree = "<group>"; };
 		9B96F22B2B33B0BE00A358D3 /* ShoppingSearchPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchPresenterTests.swift; sourceTree = "<group>"; };
 		9B96F2342B33BE0400A358D3 /* ShoppingSearchRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchRepositoryMock.swift; sourceTree = "<group>"; };
@@ -253,11 +259,28 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		9B84FCDE2B360B6900FC057E /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				9B84FCDF2B360B7600FC057E /* UINavigationControllerSpy.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		9B84FCE12B360D8700FC057E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9B84FCE22B360D9000FC057E /* NetworkServiceMock.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		9B96F2252B33B00100A358D3 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
 				9BFF70F22B353E6400F2D856 /* ProductsList */,
 				9B96F2262B33B00800A358D3 /* Search */,
+				9B84FCDB2B35F07200FC057E /* ShoppingSearchCoordinatorTests.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -314,6 +337,8 @@
 		9B96F2302B33B1C300A358D3 /* TestHelpers */ = {
 			isa = PBXGroup;
 			children = (
+				9B84FCE12B360D8700FC057E /* Network */,
+				9B84FCDE2B360B6900FC057E /* UIKit */,
 				9B96F2472B33D57700A358D3 /* Protocols */,
 			);
 			path = TestHelpers;
@@ -759,6 +784,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B2094452B35D8750023B97A /* ShoppingSearchProductsListDataSourceTests.swift in Sources */,
+				9B84FCDC2B35F07200FC057E /* ShoppingSearchCoordinatorTests.swift in Sources */,
 				9B96F23E2B33CD2200A358D3 /* ShoppingSearchViewControllerTests.swift in Sources */,
 				9B96F23A2B33C13300A358D3 /* ShoppingSearchModel+Stub.swift in Sources */,
 				9B96F2522B33DF6000A358D3 /* ShoppingSearchViewTests.swift in Sources */,
@@ -769,6 +795,7 @@
 				9B6080A42B2E7AF00074909E /* HTTPMethodTests.swift in Sources */,
 				9B6080A62B2E86330074909E /* NetworkServiceTests.swift in Sources */,
 				9B84FCD82B35E82000FC057E /* ShoppingSearchProductsListCellTests.swift in Sources */,
+				9B84FCE32B360D9000FC057E /* NetworkServiceMock.swift in Sources */,
 				9BFF70CE2B3484E100F2D856 /* ShoppingSearchDataRequestTests.swift in Sources */,
 				9B96F23C2B33C36600A358D3 /* ShoppingSearchProductModel+Stub.swift in Sources */,
 				9BBF8CC12B2E1E6E000EB8C9 /* ErrorResponseTests.swift in Sources */,
@@ -779,6 +806,7 @@
 				9BFF70F62B353E9200F2D856 /* ShoppingSearchProductsListViewControllerSpy.swift in Sources */,
 				9B6080AC2B2E880E0074909E /* URLSessionDataTaskMock.swift in Sources */,
 				9B96F2352B33BE0400A358D3 /* ShoppingSearchRepositoryMock.swift in Sources */,
+				9B84FCE02B360B7600FC057E /* UINavigationControllerSpy.swift in Sources */,
 				9B96F2372B33BEF300A358D3 /* ShoppingSearchViewControllerSpy.swift in Sources */,
 				9B2094422B35D1C30023B97A /* ShoppingSearchProductsListPresenterTests.swift in Sources */,
 				9BFF70FA2B353F3900F2D856 /* ShoppingSearchProductsListViewSpy.swift in Sources */,
