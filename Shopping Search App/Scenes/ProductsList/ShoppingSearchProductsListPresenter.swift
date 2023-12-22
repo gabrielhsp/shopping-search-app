@@ -30,14 +30,19 @@ final class ShoppingSearchProductsListPresenter {
         return numberFormatter.string(from: NSNumber(value: price))
     }
     
+    private func getProductCondition(condition: String) -> ShoppingSearchProductListItem.Condition {
+        return ShoppingSearchProductListItem.Condition(rawValue: condition) ?? .new
+    }
+    
     private func createSearchProductListItem(product: ShoppingSearchProductModel) -> ShoppingSearchProductListItem {
         ShoppingSearchProductListItem(id: product.id,
                                       image: product.thumbnail,
                                       name: product.title,
                                       originalPrice: formatPrice(from: product.price),
                                       promotionalPrice: formatPrice(from: product.salePrice),
+                                      installments: formatPrice(from: product.installments?.amount),
                                       isFreeDelivered: true,
-                                      condition: .new)
+                                      condition: getProductCondition(condition: product.condition))
     }
 }
 
