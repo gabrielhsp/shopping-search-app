@@ -35,7 +35,6 @@ final class NetworkService: NetworkServiceType {
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = request.method.rawValue
         urlRequest.allHTTPHeaderFields = request.headers
-        urlRequest.httpBody = try? JSONSerialization.data(withJSONObject: request.body)
         
         urlSession.dataTask(with: urlRequest) { [weak self] data, response, error in
             guard let self = self else { return }
