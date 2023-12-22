@@ -22,7 +22,7 @@ extension ShoppingSearchProductsListDataSource: UITableViewDelegate & UITableVie
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return UITableView.automaticDimension
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -31,6 +31,8 @@ extension ShoppingSearchProductsListDataSource: UITableViewDelegate & UITableVie
         guard let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as? ShoppingSearchProductsListCell else {
             return UITableViewCell()
         }
+        
+        cell.setItem(item: items[indexPath.row])
         
         return cell
     }
