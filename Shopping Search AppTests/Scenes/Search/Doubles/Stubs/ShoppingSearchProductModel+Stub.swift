@@ -30,14 +30,33 @@ extension ShoppingSearchProductModel {
                                    installments: installments,
                                    shipping: shipping)
     }
+    
+    static func stubList() -> [Self] {
+        return [
+            .stub(),
+            
+            .stub(condition: "used",
+                  salePrice: nil,
+                  installments: .stub(quantity: 12, rate: 16.39),
+                  shipping: .stub(freeShipping: false)),
+            
+            .stub(condition: "reuse",
+                  salePrice: nil,
+                  installments: nil,
+                  shipping: nil)
+        ]
+    }
 }
 
 extension ShoppingSearchProductModel.Installments {
-    static func stub() -> Self {
-        ShoppingSearchProductModel.Installments(quantity: 10,
-                                                amount: 720.10,
-                                                rate: 0,
-                                                currencyId: "BRL")
+    static func stub(quantity: Int = 10,
+                     amount: Double = 720.10,
+                     rate: Double = 0,
+                     currencyId: String = "BRL") -> Self {
+        ShoppingSearchProductModel.Installments(quantity: quantity,
+                                                amount: amount,
+                                                rate: rate,
+                                                currencyId: currencyId)
     }
 }
 

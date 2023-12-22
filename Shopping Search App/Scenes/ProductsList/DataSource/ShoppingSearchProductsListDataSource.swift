@@ -9,7 +9,7 @@ import UIKit
 
 final class ShoppingSearchProductsListDataSource: NSObject {
     // MARK: - Properties
-    private let items: [ShoppingSearchProductListItem]
+    private(set) var items: [ShoppingSearchProductListItem]
     
     init(items: [ShoppingSearchProductListItem] = []) {
         self.items = items

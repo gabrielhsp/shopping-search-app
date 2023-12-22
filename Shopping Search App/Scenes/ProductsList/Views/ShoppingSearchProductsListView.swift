@@ -17,7 +17,7 @@ final class ShoppingSearchProductsListView: UIView {
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.separatorInset = .zero
-        tableView.separatorColor = .none
+        tableView.separatorStyle = .none
         tableView.backgroundColor = .none
         
         return tableView
