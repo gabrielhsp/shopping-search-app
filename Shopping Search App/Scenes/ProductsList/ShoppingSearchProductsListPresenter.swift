@@ -42,14 +42,21 @@ final class ShoppingSearchProductsListPresenter {
         guard let installments = installments,
               let installmentPriceFormatted = formatPrice(from: installments.amount) else { return nil }
         
-        let installmentBaseString = "até \(installments.quantity)x \(installmentPriceFormatted)"
+        var installmentBaseString = "até \(installments.quantity)x \(installmentPriceFormatted)"
+        let installmentsContainsTaxes = installments.rate > 0 && installments.quantity > 10
+        let installmentFreeTaxString = "sem juros"
+        let installmentsBaseColor: UIColor? = installmentsContainsTaxes ? .appColor(.subtitle) : .appColor(.promotion)
+        
+        if !installmentsContainsTaxes {
+            installmentBaseString.append(" \(installmentFreeTaxString)")
+        }
         
         let installmentsStartAttributedString = NSMutableAttributedString(string: "em ", attributes: [
             .foregroundColor: UIColor.appColor(.subtitle)
         ])
         
         let installmentsBaseAttributedString = NSAttributedString(string: installmentBaseString, attributes: [
-            .foregroundColor: UIColor.appColor(.promotion)
+            .foregroundColor: installmentsBaseColor
         ])
         
         installmentsStartAttributedString.append(installmentsBaseAttributedString)
