@@ -8,6 +8,7 @@
 import UIKit
 
 final class ShoppingSearchProductsListDataSource: NSObject {
+    // MARK: - Properties
     private let items: [ShoppingSearchProductListItem]
     
     init(items: [ShoppingSearchProductListItem] = []) {
@@ -28,7 +29,8 @@ extension ShoppingSearchProductsListDataSource: UITableViewDelegate & UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let identifier = String(describing: ShoppingSearchProductsListCell.self)
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as? ShoppingSearchProductsListCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as? ShoppingSearchProductsListCell,
+              items.indices.contains(indexPath.row) else {
             return UITableViewCell()
         }
         
