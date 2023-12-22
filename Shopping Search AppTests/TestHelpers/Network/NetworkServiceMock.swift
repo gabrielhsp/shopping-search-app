@@ -13,7 +13,7 @@ final class NetworkServiceMock {
     private(set) var requestCallArgs: [any DataRequest] = []
     
     // MARK: - Mock Properties
-    var requestCompletionToBeReturned: Result<Data, Error>?
+    var requestCompletionToBeReturned: Result<DataRequestMock.Response, Error>?
 }
 
 // MARK: - NetworkServiceType

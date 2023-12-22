@@ -84,26 +84,26 @@ final class ShoppingSearchView: UIView {
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            searchTextField.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 16),
-            searchTextField.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -16),
-            searchTextField.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            searchTextField.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: Spacing.medium.rawValue),
+            searchTextField.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -Spacing.medium.rawValue),
+            searchTextField.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: Spacing.medium.rawValue),
             searchTextField.heightAnchor.constraint(equalToConstant: 50),
             
-            searchFeedbackLabel.topAnchor.constraint(equalTo: searchTextField.bottomAnchor, constant: 8),
+            searchFeedbackLabel.topAnchor.constraint(equalTo: searchTextField.bottomAnchor, constant: Spacing.extraSmall.rawValue),
             searchFeedbackLabel.trailingAnchor.constraint(equalTo: searchTextField.trailingAnchor),
             searchFeedbackLabel.leadingAnchor.constraint(equalTo: searchTextField.leadingAnchor),
             
-            searchSuggestionView.topAnchor.constraint(equalTo: searchFeedbackLabel.bottomAnchor, constant: 8),
+            searchSuggestionView.topAnchor.constraint(equalTo: searchFeedbackLabel.bottomAnchor, constant: Spacing.extraSmall.rawValue),
             searchSuggestionView.trailingAnchor.constraint(equalTo: searchTextField.trailingAnchor),
             searchSuggestionView.leadingAnchor.constraint(equalTo: searchTextField.leadingAnchor),
-            searchSuggestionView.bottomAnchor.constraint(equalTo: searchButton.topAnchor, constant: -16),
+            searchSuggestionView.bottomAnchor.constraint(equalTo: searchButton.topAnchor, constant: -Spacing.medium.rawValue),
             
             searchButton.trailingAnchor.constraint(equalTo: searchTextField.trailingAnchor),
             searchButton.leadingAnchor.constraint(equalTo: searchTextField.leadingAnchor),
             searchButton.heightAnchor.constraint(equalToConstant: 50)
         ])
         
-        bottomConstraint = searchButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -16)
+        bottomConstraint = searchButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -Spacing.medium.rawValue)
         bottomConstraint?.isActive = true
     }
     
@@ -146,14 +146,14 @@ final class ShoppingSearchView: UIView {
                 return
             }
             
-            self?.updateBottomConstraint(constant: -(keyboardSize.height + 16))
+            self?.updateBottomConstraint(constant: -(keyboardSize.height + Spacing.medium.rawValue))
         })
         
         _ = notificationCenter.addObserver(forName: UIResponder.keyboardWillHideNotification,
                                            object: nil,
                                            queue: nil,
                                            using: { [weak self] _ in
-            self?.updateBottomConstraint(constant: -16)
+            self?.updateBottomConstraint(constant: -Spacing.medium.rawValue)
         })
     }
     
