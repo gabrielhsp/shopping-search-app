@@ -61,7 +61,10 @@ final class ShoppingSearchProductsListPresenter {
         return URL(string: imageURL)
     }
     
-    // TODO: - Remove the isFreeDelivered mock data and use what's the API brings us back
+    private func getProductFreeShipping(isFreeShipping: Bool?) -> Bool {
+        return isFreeShipping ?? false
+    }
+    
     private func createSearchProductListItem(product: ShoppingSearchProductModel) -> ShoppingSearchProductListItem {
         ShoppingSearchProductListItem(id: product.id,
                                       image: getProductThumbnailURL(imageURL: product.thumbnail),
@@ -69,7 +72,7 @@ final class ShoppingSearchProductsListPresenter {
                                       originalPrice: formatPrice(from: product.price),
                                       promotionalPrice: formatPrice(from: product.salePrice),
                                       installments: getProductInstallments(for: product.installments),
-                                      isFreeDelivered: true,
+                                      isFreeDelivered: getProductFreeShipping(isFreeShipping: product.shipping?.freeShipping),
                                       condition: getProductCondition(condition: product.condition))
     }
 }

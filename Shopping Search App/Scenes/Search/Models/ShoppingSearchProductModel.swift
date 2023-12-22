@@ -17,11 +17,16 @@ struct ShoppingSearchProductModel: Decodable, Equatable {
     let salePrice: Double?
     let availableQuantity: Int
     let installments: Installments?
+    let shipping: Shipping?
     
     struct Installments: Decodable, Equatable {
         let quantity: Int
         let amount: Double
         let rate: Double
         let currencyId: String
+    }
+    
+    struct Shipping: Decodable, Equatable {
+        let freeShipping: Bool
     }
 }
