@@ -54,7 +54,7 @@ final class ShoppingSearchProductsListView: UIView {
     }
     
     private func setupAdditionalConfiguration() {
-        backgroundColor = .appColor(.background)
+        backgroundColor = .background
         tableView.register(ShoppingSearchProductsListCell.self, forCellReuseIdentifier: String(describing: ShoppingSearchProductsListCell.self))
     }
 }

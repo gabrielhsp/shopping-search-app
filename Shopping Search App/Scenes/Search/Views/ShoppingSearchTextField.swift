@@ -46,11 +46,11 @@ final class ShoppingSearchTextField: UITextField {
     }
     
     private func setupFieldLayout() {
-        backgroundColor = .appColor(.textFieldBackground)
-        textColor = .appColor(.textFieldValue)
+        backgroundColor = .textFieldBackground
+        textColor = .textFieldValue
         setCornerRadius(radius: 16)
         attributedPlaceholder = NSAttributedString(string: LocalizedStrings.searchTextFieldPlaceholder, attributes: [
-            .foregroundColor: UIColor.appColor(.textFieldPlaceholder)
+            .foregroundColor: UIColor.textFieldPlaceholder
         ])
     }
 }

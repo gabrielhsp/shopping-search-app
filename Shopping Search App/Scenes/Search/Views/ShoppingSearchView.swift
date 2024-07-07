@@ -108,7 +108,7 @@ final class ShoppingSearchView: UIView {
     }
     
     private func setupAdditionalConfiguration() {
-        backgroundColor = .appColor(.background)
+        backgroundColor = .background
         searchTextField.delegate = self
         searchTextField.addTarget(self, action: #selector(updateSearchTextFieldFeedback(_:)), for: .editingChanged)
         searchButton.addTarget(self, action: #selector(addActionOnSearchButton), for: .touchUpInside)

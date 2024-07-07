@@ -46,7 +46,7 @@ final class ShoppingSearchProductsListCell: UITableViewCell {
         
         label.font = Fonts.extraSmall.applyFont(weight: .regular)
         label.text = LocalizedStrings.freeShipping
-        label.textColor = .appColor(.promotion)
+        label.textColor = .promotion
         
         return label
     }()
@@ -56,7 +56,7 @@ final class ShoppingSearchProductsListCell: UITableViewCell {
         
         label.font = Fonts.large.applyFont(weight: .medium)
         label.numberOfLines = 3
-        label.textColor = .appColor(.subtitle)
+        label.textColor = .subtitle
         
         return label
     }()
@@ -74,7 +74,7 @@ final class ShoppingSearchProductsListCell: UITableViewCell {
         let label = UILabel()
         
         label.font = Fonts.medium.applyFont(weight: .semibold)
-        label.textColor = .appColor(.title)
+        label.textColor = .title
         
         return label
     }()
@@ -83,7 +83,7 @@ final class ShoppingSearchProductsListCell: UITableViewCell {
         let label = UILabel()
         
         label.font = Fonts.small.applyFont(weight: .regular)
-        label.textColor = .appColor(.title)
+        label.textColor = .title
         
         return label
     }()
@@ -92,7 +92,7 @@ final class ShoppingSearchProductsListCell: UITableViewCell {
         let label = UILabel()
         
         label.font = Fonts.extraSmall.applyFont(weight: .semibold)
-        label.textColor = .appColor(.action)
+        label.textColor = .action
         
         return label
     }()
@@ -145,7 +145,7 @@ final class ShoppingSearchProductsListCell: UITableViewCell {
     }
     
     private func setupAdditionalConfiguration() {
-        backgroundColor = .appColor(.background)
+        backgroundColor = .background
         selectionStyle = .none
     }
     

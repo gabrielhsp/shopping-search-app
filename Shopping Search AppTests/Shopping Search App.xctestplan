@@ -18,6 +18,7 @@
         }
       ]
     },
+    "language" : "pt-BR",
     "targetForVariableExpansion" : {
       "containerPath" : "container:Shopping Search App.xcodeproj",
       "identifier" : "9BBF8C7B2B2E0B69000EB8C9",

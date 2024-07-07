@@ -61,7 +61,7 @@ final class ShoppingSearchViewControllerTests: QuickSpec {
                     let assertObject = navigationController.navigationBar
                     
                     expect(assertObject.prefersLargeTitles).to(beTrue())
-                    expect(assertObject.tintColor).to(equal(.appColor(.title)))
+                    expect(assertObject.tintColor).to(equal(.title))
                     expect(navigationController.navigationItem.backButtonDisplayMode).to(equal(.minimal))
                 }
             }

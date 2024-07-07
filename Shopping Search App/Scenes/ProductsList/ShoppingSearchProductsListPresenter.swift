@@ -44,14 +44,14 @@ final class ShoppingSearchProductsListPresenter {
         var installmentBaseString = "até \(installments.quantity)x \(installmentPriceFormatted)"
         let installmentsContainsTaxes = installments.rate > 0 && installments.quantity > 10
         let installmentFreeTaxString = LocalizedStrings.freeTaxes
-        let installmentsBaseColor: UIColor? = installmentsContainsTaxes ? .appColor(.subtitle) : .appColor(.promotion)
+        let installmentsBaseColor: UIColor? = installmentsContainsTaxes ? .subtitle : .promotion
         
         if !installmentsContainsTaxes {
             installmentBaseString.append(" \(installmentFreeTaxString)")
         }
         
         let installmentsStartAttributedString = NSMutableAttributedString(string: "em ", attributes: [
-            .foregroundColor: UIColor.appColor(.subtitle)
+            .foregroundColor: UIColor.subtitle
         ])
         
         let installmentsBaseAttributedString = NSAttributedString(string: installmentBaseString, attributes: [

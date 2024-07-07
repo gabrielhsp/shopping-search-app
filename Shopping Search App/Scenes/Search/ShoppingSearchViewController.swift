@@ -45,7 +45,7 @@ final class ShoppingSearchViewController: UIViewController {
     private func setupNavigationBar() {
         title = LocalizedStrings.search
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationBar.tintColor = .appColor(.title)
+        navigationController?.navigationBar.tintColor = .title
         navigationController?.navigationItem.backButtonDisplayMode = .minimal
     }
     

@@ -44,7 +44,6 @@
 		9BB96D422B31F3D600D193CD /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB96D412B31F3D600D193CD /* UIView+Extension.swift */; };
 		9BB96D452B31F58B00D193CD /* ShoppingSearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB96D442B31F58B00D193CD /* ShoppingSearchTextField.swift */; };
 		9BB96D472B31F93F00D193CD /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BB96D462B31F93F00D193CD /* Colors.xcassets */; };
-		9BB96D4A2B31FA1400D193CD /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB96D492B31FA1400D193CD /* Colors.swift */; };
 		9BB96D4D2B3247BA00D193CD /* NotificationCenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB96D4C2B3247BA00D193CD /* NotificationCenterProtocol.swift */; };
 		9BB96D4F2B32792C00D193CD /* ShoppingSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB96D4E2B32792C00D193CD /* ShoppingSearchPresenter.swift */; };
 		9BB96D532B327DD200D193CD /* ShoppingSearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB96D522B327DD200D193CD /* ShoppingSearchRepository.swift */; };
@@ -130,7 +129,6 @@
 		9BB96D412B31F3D600D193CD /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		9BB96D442B31F58B00D193CD /* ShoppingSearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchTextField.swift; sourceTree = "<group>"; };
 		9BB96D462B31F93F00D193CD /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		9BB96D492B31FA1400D193CD /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		9BB96D4C2B3247BA00D193CD /* NotificationCenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterProtocol.swift; sourceTree = "<group>"; };
 		9BB96D4E2B32792C00D193CD /* ShoppingSearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchPresenter.swift; sourceTree = "<group>"; };
 		9BB96D522B327DD200D193CD /* ShoppingSearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchRepository.swift; sourceTree = "<group>"; };
@@ -373,7 +371,6 @@
 			isa = PBXGroup;
 			children = (
 				9BFF70F02B3539A500F2D856 /* Assets.swift */,
-				9BB96D492B31FA1400D193CD /* Colors.swift */,
 				9B84FCEA2B361CB400FC057E /* LocalizedStrings.swift */,
 				9B84FCE42B36163F00FC057E /* Spacing.swift */,
 				9BFF70EA2B34DFC000F2D856 /* Enumerators */,
@@ -766,7 +763,6 @@
 				9BFF70DB2B3496B200F2D856 /* ShoppingSearchProductsListView.swift in Sources */,
 				9BFF70D32B348F8E00F2D856 /* ShoppingSearchProductsListViewController.swift in Sources */,
 				9BB96D4D2B3247BA00D193CD /* NotificationCenterProtocol.swift in Sources */,
-				9BB96D4A2B31FA1400D193CD /* Colors.swift in Sources */,
 				9BBF8C802B2E0B69000EB8C9 /* AppDelegate.swift in Sources */,
 				9B3A72862B312BD4008A7581 /* ShoppingSearchView.swift in Sources */,
 				9BFF70E52B34D48A00F2D856 /* ShoppingSearchProductsListCell.swift in Sources */,
