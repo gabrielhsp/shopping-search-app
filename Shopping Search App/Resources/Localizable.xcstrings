@@ -1,0 +1,127 @@
+{
+  "sourceLanguage" : "pt-BR",
+  "strings" : {
+    "free_shipping" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Frete Grátis"
+          }
+        }
+      }
+    },
+    "free_taxes" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "sem juros"
+          }
+        }
+      }
+    },
+    "product_condition_new" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Produto novo"
+          }
+        }
+      }
+    },
+    "product_condition_used" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Produto usado"
+          }
+        }
+      }
+    },
+    "search" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Busca"
+          }
+        }
+      }
+    },
+    "search_button_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buscar"
+          }
+        }
+      }
+    },
+    "search_error_empty_result" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sua busca não retornou nenhum resultado. Por favor, tente novamente."
+          }
+        }
+      }
+    },
+    "search_error_general" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Houve um erro ao realizar sua busca. Por favor, tente novamente."
+          }
+        }
+      }
+    },
+    "search_error_valid_term" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Digite um termo de busca válido"
+          }
+        }
+      }
+    },
+    "search_results_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Resultados da busca"
+          }
+        }
+      }
+    },
+    "search_text_field_placeholder" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "O que você está procurando?"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
