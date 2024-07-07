@@ -16,6 +16,7 @@ final class ShoppingSearchProductsListCell: UITableViewCell {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.kf.indicatorType = .activity
         imageView.contentMode = .scaleAspectFit
+        imageView.backgroundColor = .white
         imageView.setCornerRadius(radius: 16)
         
         return imageView
