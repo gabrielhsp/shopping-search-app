@@ -368,12 +368,12 @@
 		9BB96D3F2B31F3BD00D193CD /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				9B84FCEC2B3621C100FC057E /* Fonts.swift */,
 				9B84FCEA2B361CB400FC057E /* LocalizedStrings.swift */,
 				9B84FCE42B36163F00FC057E /* Spacing.swift */,
 				9BFF70EA2B34DFC000F2D856 /* Enumerators */,
 				9BB96D402B31F3C400D193CD /* Extensions */,
 				9BB96D4B2B3247AB00D193CD /* Protocols */,
-				9B84FCEC2B3621C100FC057E /* Fonts.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
