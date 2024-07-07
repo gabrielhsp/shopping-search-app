@@ -710,6 +710,7 @@
 			knownRegions = (
 				Base,
 				"pt-BR",
+				en,
 			);
 			mainGroup = 9BBF8C732B2E0B69000EB8C9;
 			packageReferences = (

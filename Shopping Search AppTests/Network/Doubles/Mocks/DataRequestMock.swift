@@ -15,9 +15,9 @@ struct DataRequestMock: DataRequest {
     
     var method: HTTPMethod = .get
     
-    var headers: [String: String] = [:]
+    var headers: [String: String]? = [:]
     
-    var queryItems: [String: String] = [:]
+    var queryItems: [String: String]? = [:]
     
     func decode(_ data: Data) throws -> Response {
         return try JSONDecoder().decode(ResponseDummy.self, from: data)

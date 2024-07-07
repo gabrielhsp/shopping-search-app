@@ -15,7 +15,7 @@ extension ShoppingSearchProductModel {
                      thumbnail: String = "iphone-14.jpg",
                      price: Double = 7200.10,
                      originalPrice: Double? = 7200.10,
-                     salePrice: Double? = 6200.10,
+                     salePrice: SalePrice? = .stub(),
                      availableQuantity: Int = 100,
                      installments: Installments? = .stub(),
                      shipping: Shipping? = .stub()) -> Self {
@@ -63,5 +63,11 @@ extension ShoppingSearchProductModel.Installments {
 extension ShoppingSearchProductModel.Shipping {
     static func stub(freeShipping: Bool = true) -> Self {
         ShoppingSearchProductModel.Shipping(freeShipping: freeShipping)
+    }
+}
+
+extension ShoppingSearchProductModel.SalePrice {
+    static func stub(amount: Double? = 6200.10) -> Self {
+        ShoppingSearchProductModel.SalePrice(amount: amount)
     }
 }
