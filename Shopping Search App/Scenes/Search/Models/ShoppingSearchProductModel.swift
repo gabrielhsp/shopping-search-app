@@ -14,7 +14,7 @@ struct ShoppingSearchProductModel: Decodable, Equatable {
     let thumbnail: String
     let price: Double
     let originalPrice: Double?
-    let salePrice: Double?
+    let salePrice: SalePrice?
     let availableQuantity: Int
     let installments: Installments?
     let shipping: Shipping?
@@ -28,5 +28,9 @@ struct ShoppingSearchProductModel: Decodable, Equatable {
     
     struct Shipping: Decodable, Equatable {
         let freeShipping: Bool
+    }
+    
+    struct SalePrice: Decodable, Equatable {
+        let amount: Double?
     }
 }

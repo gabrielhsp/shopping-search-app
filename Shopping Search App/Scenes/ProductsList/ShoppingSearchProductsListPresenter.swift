@@ -76,7 +76,7 @@ final class ShoppingSearchProductsListPresenter {
                                       image: getProductThumbnailURL(imageURL: product.thumbnail),
                                       name: product.title,
                                       originalPrice: formatPrice(from: product.price),
-                                      promotionalPrice: formatPrice(from: product.salePrice),
+                                      promotionalPrice: formatPrice(from: product.salePrice?.amount),
                                       installments: getProductInstallments(for: product.installments),
                                       isFreeDelivered: getProductFreeShipping(isFreeShipping: product.shipping?.freeShipping),
                                       condition: getProductCondition(condition: product.condition))
