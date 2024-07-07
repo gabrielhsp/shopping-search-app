@@ -24,7 +24,9 @@ final class NetworkService: NetworkServiceType {
             return
         }
         
-        urlComponent.queryItems = request.queryItems.map { URLQueryItem(name: $0.key, value: $0.value) }
+        if request.method == .get {
+            urlComponent.queryItems = request.queryItems?.map { URLQueryItem(name: $0.key, value: $0.value) }
+        }
         
         guard let url = urlComponent.url else {
             let error = createError(forError: .invalidEndpoint)
@@ -35,6 +37,7 @@ final class NetworkService: NetworkServiceType {
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = request.method.rawValue
         urlRequest.allHTTPHeaderFields = request.headers
+        urlRequest.httpBody = request.body
         
         urlSession.dataTask(with: urlRequest) { [weak self] data, response, error in
             guard let self = self else { return }
