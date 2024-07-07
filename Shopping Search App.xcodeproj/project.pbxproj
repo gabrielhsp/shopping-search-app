@@ -74,7 +74,6 @@
 		9BFF70E92B34DF7D00F2D856 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFF70E82B34DF7D00F2D856 /* CoordinatorProtocol.swift */; };
 		9BFF70EC2B34DFD600F2D856 /* CoordinatorNavigationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFF70EB2B34DFD600F2D856 /* CoordinatorNavigationType.swift */; };
 		9BFF70EF2B35349300F2D856 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 9BFF70EE2B35349300F2D856 /* Kingfisher */; };
-		9BFF70F12B3539A500F2D856 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFF70F02B3539A500F2D856 /* Assets.swift */; };
 		9BFF70F62B353E9200F2D856 /* ShoppingSearchProductsListViewControllerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFF70F52B353E9200F2D856 /* ShoppingSearchProductsListViewControllerSpy.swift */; };
 		9BFF70F82B353EDC00F2D856 /* ShoppingSearchProductsListPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFF70F72B353EDC00F2D856 /* ShoppingSearchProductsListPresenterSpy.swift */; };
 		9BFF70FA2B353F3900F2D856 /* ShoppingSearchProductsListViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFF70F92B353F3900F2D856 /* ShoppingSearchProductsListViewSpy.swift */; };
@@ -161,7 +160,6 @@
 		9BFF70E62B34DF6700F2D856 /* ShoppingSearchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchCoordinator.swift; sourceTree = "<group>"; };
 		9BFF70E82B34DF7D00F2D856 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
 		9BFF70EB2B34DFD600F2D856 /* CoordinatorNavigationType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorNavigationType.swift; sourceTree = "<group>"; };
-		9BFF70F02B3539A500F2D856 /* Assets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		9BFF70F52B353E9200F2D856 /* ShoppingSearchProductsListViewControllerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchProductsListViewControllerSpy.swift; sourceTree = "<group>"; };
 		9BFF70F72B353EDC00F2D856 /* ShoppingSearchProductsListPresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchProductsListPresenterSpy.swift; sourceTree = "<group>"; };
 		9BFF70F92B353F3900F2D856 /* ShoppingSearchProductsListViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchProductsListViewSpy.swift; sourceTree = "<group>"; };
@@ -370,7 +368,6 @@
 		9BB96D3F2B31F3BD00D193CD /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				9BFF70F02B3539A500F2D856 /* Assets.swift */,
 				9B84FCEA2B361CB400FC057E /* LocalizedStrings.swift */,
 				9B84FCE42B36163F00FC057E /* Spacing.swift */,
 				9BFF70EA2B34DFC000F2D856 /* Enumerators */,
@@ -779,7 +776,6 @@
 				9B84FCE52B36163F00FC057E /* Spacing.swift in Sources */,
 				9BFF70E12B34AD4700F2D856 /* ShoppingSearchProductModel.swift in Sources */,
 				9BBF8CBD2B2E126A000EB8C9 /* NetworkService.swift in Sources */,
-				9BFF70F12B3539A500F2D856 /* Assets.swift in Sources */,
 				9BBF8CBB2B2E11B2000EB8C9 /* URLSessionProtocol.swift in Sources */,
 				9BBF8CB72B2E1179000EB8C9 /* ErrorResponse.swift in Sources */,
 				9BBF8CB52B2E1160000EB8C9 /* HTTPMethod.swift in Sources */,

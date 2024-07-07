@@ -151,11 +151,11 @@ final class ShoppingSearchProductsListCell: UITableViewCell {
     
     private func setProductImage(imageURL: URL?) {
         guard let imageURL = imageURL else {
-            productImageView.image = UIImage(named: Assets.imagePlaceholder.rawValue)
+            productImageView.image = .imagePlaceholder
             return
         }
         
-        productImageView.kf.setImage(with: imageURL, placeholder: UIImage(named: Assets.imagePlaceholder.rawValue))
+        productImageView.kf.setImage(with: imageURL, placeholder: UIImage.imagePlaceholder)
     }
 }
 
